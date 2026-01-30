@@ -3,30 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#050814" />
 
-  <!-- Favicon -->
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-
-  <!-- Put your site title here -->
-  <title>JP Peng | Quantitative Research & Portfolio Analytics</title>
-
-  <meta name="description" content="JP Peng — Quantitative portfolio analyst focused on systematic equity strategies, volatility modeling, and risk-aware portfolio construction." />
-  <meta name="keywords" content="JP Peng, Quant, Quantitative Research, Portfolio Optimization, Systematic Trading, Python, SQL, Barra, EGARCH, HMM, PCA, Risk Model" />
-
   <link rel="stylesheet" href="index.css" />
+
+  <title>JP Peng | Quantitative Researcher • Portfolio Analyst</title>
+  <meta
+    name="description"
+    content="JP Peng — Quantitative Researcher / Portfolio Analyst. Volatility analysis, factor attribution, risk exposure control, rolling backtests, automated trading, and valuation."
+  />
+  <meta
+    name="keywords"
+    content="JP Peng, Quantitative Researcher, Portfolio Analyst, Risk Modeler, Model Validator, Valuation, Python, Barra, PCA, EGARCH, HMM, Monte Carlo, Backtesting"
+  />
 </head>
 
 <body>
-  <!-- ***** Header ***** -->
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation" aria-label="Primary">
-        <a class="nav__brand" href="#top" aria-label="Go to top">
-          <span class="nav__brand-mark">JP</span>
-          <span class="nav__brand-text">Peng</span>
-        </a>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- ======= Top Ticker (optional animation via CSS) ======= -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span class="ticker__item">SPY +0.37%</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">NVDA -0.82%</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">VIX 13.9</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">IC(t) ↑</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">σ̂(EGARCH)</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">HMM Regime: {0,1}</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">w* = argmin wᵀΣw</span>
+      <span class="ticker__dot">•</span>
+
+      <!-- duplicate set for seamless looping -->
+      <span class="ticker__item">SPY +0.37%</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">NVDA -0.82%</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">VIX 13.9</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">IC(t) ↑</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">σ̂(EGARCH)</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">HMM Regime: {0,1}</span>
+      <span class="ticker__dot">•</span>
+      <span class="ticker__item">w* = argmin wᵀΣw</span>
+      <span class="ticker__dot">•</span>
+    </div>
+  </div>
+
+  <!-- ======= Header / Hero ======= -->
+  <header class="header" role="banner" id="top">
+    <div class="row header__nav">
+      <div class="brand">
+        <a class="brand__link" href="#top" aria-label="JP Peng home">
+          <span class="brand__mark" aria-hidden="true">JP</span>
+          <span class="brand__name">Peng</span>
+        </a>
+      </div>
+
+      <nav class="nav" role="navigation" aria-label="Primary navigation">
         <ul class="nav__items">
           <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
           <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
@@ -36,310 +79,414 @@
       </nav>
     </div>
 
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <span>JP Peng</span>
+    <div class="row hero">
+      <div class="hero__left">
+        <h1 class="hero__title">
+          <span class="hero__name">JP Peng</span>
         </h1>
 
-        <p class="header__subtitle">
-          Quantitative Research & Portfolio Analytics • Systematic Equity • Volatility Modeling
+        <p class="hero__role">
+          Quantitative Researcher / Portfolio Analyst / Data Analyst / Risk Modeler / Model Validator / Valuation Professional
         </p>
 
-        <p class="header__desc">
-          I build leakage-safe, research-grade pipelines for alpha discovery, risk decomposition, and portfolio optimization —
-          from factor validation (IC / Fama–MacBeth) to volatility forecasting (EGARCH) and regime modeling (HMM).
+        <p class="hero__motto">
+          <span class="motto__label">Motto:</span>
+          <span class="motto__text">Modeling through uncertainty, integrating analytical information, controlling risk exposure</span>
         </p>
 
-        <div class="header__cta">
-          <a href="#contact" class="btn btn--pink">Get in touch</a>
-          <a href="./JP_PENG_QUANT_RESUME_PORTFOLIO.pdf" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
+        <p class="hero__intro">
+          M.S. in Financial Mathematics at NC State University, with a B.S. in Mathematics and a B.A. in Business Administration (Finance) from UC Irvine.
+          I build research-grade workflows for systematic strategies and risk analytics—spanning Monte Carlo simulation, option modeling and Greeks hedging,
+          time-series volatility forecasting, and factor/risk decomposition—delivered in clean, production-minded Python (NumPy, Pandas, SciPy, scikit-learn),
+          plus SQL, R, Matlab, and Bloomberg Terminal.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#contact" class="btn btn--primary">Get in touch</a>
+
+          <!-- Opens resume PDF in on-page modal -->
+          <button
+            class="btn btn--ghost js-open-pdf"
+            type="button"
+            data-pdf="./resume/JP_PENG_QUANT_RESUME_PORTFOLIO.pdf"
+            aria-haspopup="dialog"
+            aria-controls="pdf-modal"
+          >
             View Resume
-          </a>
+          </button>
         </div>
 
-        <div class="header__meta">
-          <span>Raleigh, NC</span>
-          <span class="dot">•</span>
-          <a href="mailto:jpeng7@ncsu.edu">jpeng7@ncsu.edu</a>
-          <span class="dot">•</span>
-          <a href="tel:+16266508800">(626) 650-8800</a>
+        <div class="hero__meta">
+          <span>Los Angeles, CA</span>
+          <span class="hero__sep">•</span>
+          <a class="hero__link" href="mailto:jinjia.peng1122@gmail.com">jinjia.peng1122@gmail.com</a>
+          <span class="hero__sep">•</span>
+          <span>(626) 650-8800</span>
         </div>
       </div>
 
-      <!-- Optional hero graphic / photo -->
-      <div class="header__visual" aria-hidden="true">
-        <div class="hero-card">
-          <div class="hero-card__title">Current Focus</div>
-          <ul class="hero-card__list">
-            <li>Systematic equity alpha research</li>
-            <li>Risk modeling: Barra / PCA factors</li>
-            <li>Volatility: EGARCH + regime switching</li>
-            <li>Optimization: risk parity + exposure control</li>
+      <aside class="hero__right">
+        <div class="card card--glass">
+          <h2 class="card__title">Current Focus</h2>
+          <ul class="card__list">
+            <li>Volatility analysis</li>
+            <li>Factor attribution</li>
+            <li>Portfolio risk exposure control</li>
+            <li>Rolling-strategy backtesting</li>
+            <li>Automated trading</li>
+            <li>Financial instruments valuation</li>
           </ul>
         </div>
-      </div>
+
+        <!-- Decorative formulas (CSS can float/fade them) -->
+        <div class="formula-cloud" aria-hidden="true">
+          <span class="fx fx--1">rₜ = μ + σₜεₜ</span>
+          <span class="fx fx--2">σₜ² = ω + αεₜ₋₁² + βσₜ₋₁²</span>
+          <span class="fx fx--3">IC = corr(factor, rₜ₊ₕ)</span>
+          <span class="fx fx--4">VaR₀.₉₅ = -q₀.₀₅(PnL)</span>
+        </div>
+      </aside>
     </div>
   </header>
 
-  <main role="main">
-    <!-- ***** Projects ***** -->
-    <section class="work" id="projects">
+  <main id="main" role="main">
+
+    <!-- ======= Projects ======= -->
+    <section class="section" id="projects">
       <div class="row">
-        <h2>Selected Projects</h2>
-        <p class="section__lead">
-          A few representative builds. You can replace titles, text, stacks, and links as you upload your screenshots and repos.
+        <h2 class="section__title">Selected Projects</h2>
+        <p class="section__subtitle">
+          A few representative builds—leakage-aware research, risk decomposition, and simulation/valuation tooling.
         </p>
 
-        <div class="work__boxes">
+        <div class="grid grid--projects">
 
           <!-- Project 1 -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Systematic Equity Alpha Research Pipeline</h3>
-              <p>
-                End-to-end factor research workflow: universe filters, sample-space alignment, IC hypothesis testing,
-                Fama–MacBeth regressions, and risk-aware portfolio construction.
+          <article class="project card">
+            <div class="project__header">
+              <h3 class="project__title">Systematic Equity Alpha Research Pipeline</h3>
+              <p class="project__desc">
+                End-to-end alpha research workflow with factor validation (IC t-stats, Fama–MacBeth), risk decomposition (Barra + PCA),
+                volatility/regime overlays (EGARCH + HMM), and rolling evaluation discipline—built for repeatability, defensibility, and iteration speed.
               </p>
 
-              <ul class="work__list">
-                <li>Python</li>
-                <li>NumPy / Pandas</li>
-                <li>SQL</li>
-                <li>Backtesting</li>
-              </ul>
+              <div class="tagrow" aria-label="Project tags">
+                <span class="tag">Python</span>
+                <span class="tag">Factor Research</span>
+                <span class="tag">Barra / PCA</span>
+                <span class="tag">EGARCH</span>
+                <span class="tag">HMM</span>
+                <span class="tag">Backtesting</span>
+              </div>
 
-              <div class="work__links">
-                <a href="#" class="link__text" target="_blank" rel="noopener noreferrer">
-                  View Writeup <span>&rarr;</span>
-                </a>
-                <a href="#" title="View Source Code" target="_blank" rel="noopener noreferrer">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
+              <div class="project__actions">
+                <button
+                  class="btn btn--small btn--primary js-open-pdf"
+                  type="button"
+                  data-pdf="./pdf/Multi_Alpha_Vol_Driven_Trading_Strategy.pdf"
+                  aria-haspopup="dialog"
+                  aria-controls="pdf-modal"
+                >
+                  Click to View Report
+                </button>
+
+                <a class="btn btn--small btn--ghost" href="https://github.com/jppeng-123/Quantitative-Portfolio" target="_blank" rel="noopener">
+                  View Code
                 </a>
               </div>
             </div>
 
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project screenshot placeholder" />
+            <div class="project__media">
+              <figure class="media">
+                <img src="./images/Corr.png" alt="Alpha correlation heatmap (Pearson)" loading="lazy" />
+                <figcaption>Alpha correlation structure (Pearson) — diversification & redundancy checks.</figcaption>
+              </figure>
+
+              <figure class="media media--secondary">
+                <img src="./images/strategy_return.jpg" alt="Strategy cumulative returns chart" loading="lazy" />
+                <figcaption>Cumulative return profile (strategy vs benchmark vs hedged) — performance context.</figcaption>
+              </figure>
             </div>
-          </div>
+          </article>
 
           <!-- Project 2 -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Volatility Forecasting & Regime Switching Allocator</h3>
-              <p>
-                Rolling EGARCH volatility forecasts with a regime-switching model (HMM) to dynamically adjust allocations
-                across strategies under varying volatility states.
+          <article class="project card">
+            <div class="project__header">
+              <h3 class="project__title">Monte Carlo Stock Simulation (Jump-Diffusion GBM)</h3>
+              <p class="project__desc">
+                Built a jump-diffusion Monte Carlo framework for equity dynamics and tail-risk stress testing, including variance reduction and scenario-based
+                loss analysis—useful for position sizing, risk limits, and valuation sensitivity checks.
               </p>
 
-              <ul class="work__list">
-                <li>Time Series</li>
-                <li>EGARCH</li>
-                <li>HMM</li>
-                <li>Optimization</li>
-              </ul>
+              <div class="tagrow" aria-label="Project tags">
+                <span class="tag">Monte Carlo</span>
+                <span class="tag">Jump Diffusion</span>
+                <span class="tag">VaR / Stress</span>
+                <span class="tag">Python</span>
+                <span class="tag">Risk</span>
+              </div>
 
-              <div class="work__links">
-                <a href="#" class="link__text" target="_blank" rel="noopener noreferrer">
-                  View Notes <span>&rarr;</span>
-                </a>
-                <a href="#" title="View Source Code" target="_blank" rel="noopener noreferrer">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
+              <div class="project__actions">
+                <button
+                  class="btn btn--small btn--primary js-open-pdf"
+                  type="button"
+                  data-pdf="./pdf/iSoftStone_Information_Technology_Stock_Analysis.pdf"
+                  aria-haspopup="dialog"
+                  aria-controls="pdf-modal"
+                >
+                  Click to View Report
+                </button>
               </div>
             </div>
 
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project screenshot placeholder" />
+            <div class="project__media">
+              <figure class="media">
+                <img src="./images/return_simulation.png" alt="Convergence of expected winnings / simulation convergence chart" loading="lazy" />
+                <figcaption>Simulation convergence & stability diagnostics.</figcaption>
+              </figure>
+
+              <figure class="media media--secondary">
+                <img src="./images/MC.png" alt="Monte Carlo simulation plot" loading="lazy" />
+                <figcaption>Monte Carlo path-based outcome distribution for tail analysis.</figcaption>
+              </figure>
             </div>
-          </div>
+          </article>
 
           <!-- Project 3 -->
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Risk Decomposition with Barra + PCA</h3>
-              <p>
-                Integrated multi-factor risk model exposures and performed PCA on return matrices to analyze explained variance,
-                then optimized under risk-parity and factor exposure constraints.
+          <article class="project card">
+            <div class="project__header">
+              <h3 class="project__title">PCA Factor Decomposition (S&amp;P 500 Financials)</h3>
+              <p class="project__desc">
+                Applied PCA to daily returns of selected S&amp;P 500 financial-sector stocks to identify dominant variance drivers and reduce dimensionality,
+                supporting risk interpretation and factor attribution.
               </p>
 
-              <ul class="work__list">
-                <li>MSCI Barra-style risk</li>
-                <li>PCA</li>
-                <li>Risk parity</li>
-                <li>Constraint optimization</li>
-              </ul>
+              <div class="tagrow" aria-label="Project tags">
+                <span class="tag">PCA</span>
+                <span class="tag">Covariance</span>
+                <span class="tag">Eigen Decomposition</span>
+                <span class="tag">Risk Attribution</span>
+              </div>
 
-              <div class="work__links">
-                <a href="#" class="link__text" target="_blank" rel="noopener noreferrer">
-                  View Report <span>&rarr;</span>
-                </a>
-                <a href="#" title="View Source Code" target="_blank" rel="noopener noreferrer">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
+              <div class="project__actions">
+                <!-- IMPORTANT: the '&' in filename must be URL-encoded as %26 -->
+                <button
+                  class="btn btn--small btn--primary js-open-pdf"
+                  type="button"
+                  data-pdf="./pdf/PCAS%26P500_Stock_Analysis.pdf"
+                  aria-haspopup="dialog"
+                  aria-controls="pdf-modal"
+                >
+                  Click to View Report
+                </button>
               </div>
             </div>
 
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project screenshot placeholder" />
+            <div class="project__media">
+              <figure class="media">
+                <img src="./images/PCA.png" alt="PCA results visualization" loading="lazy" />
+                <figcaption>PCA results — reduced space structure and component dynamics.</figcaption>
+              </figure>
+
+              <figure class="media media--secondary">
+                <img src="./images/BM.png" alt="Brownian motion paths illustration" loading="lazy" />
+                <figcaption>Stochastic process intuition (used across simulation + modeling).</figcaption>
+              </figure>
             </div>
-          </div>
+          </article>
 
         </div>
       </div>
     </section>
 
-    <!-- ***** Experience ***** -->
-    <section class="experience" id="experience">
+    <!-- ======= Experience ======= -->
+    <section class="section" id="experience">
       <div class="row">
-        <h2>Experience</h2>
-        <p class="section__lead">
-          Industry work focused on research tooling, execution analytics, and systematic strategy development.
-        </p>
-
+        <h2 class="section__title">Experience</h2>
         <div class="timeline">
 
-          <div class="timeline__item">
-            <div class="timeline__when">Jul 2025 – Aug 2025</div>
-            <div class="timeline__what">
-              <h3>Ubiquant — Quantitative Development (IT Support)</h3>
-              <p>
-                Built vectorized Python pipelines for large-scale trading/market data, order–trade reconciliation tools,
-                and automated dashboards for P&L attribution and real-time risk monitoring.
-              </p>
-              <ul class="chips">
-                <li class="chip">Python</li>
-                <li class="chip">Data pipelines</li>
-                <li class="chip">TCA / slippage</li>
-                <li class="chip">P&L attribution</li>
-              </ul>
+          <!-- Ubiquant QD -->
+          <article class="xp card">
+            <div class="xp__top">
+              <div>
+                <h3 class="xp__role">Quantitative Development IT Supporter</h3>
+                <p class="xp__org">Ubiquant | Summer Quantitative Development Internship</p>
+              </div>
+              <div class="xp__meta">
+                <span class="xp__date">July 2025 – August 2025</span>
+                <span class="xp__loc">Tsinghua Science Park, Beijing</span>
+              </div>
             </div>
-          </div>
 
-          <div class="timeline__item">
-            <div class="timeline__when">Apr 2025 – Jul 2025</div>
-            <div class="timeline__what">
-              <h3>Ubiquant — Quantitative Research (Systematic Equity)</h3>
-              <p>
-                Built SQL-based equity/dividend database, replicated formulaic alphas, evaluated factors via IC t-stats and
-                Fama–MacBeth, and developed EGARCH + HMM allocation logic for strategy adaptation.
-              </p>
-              <ul class="chips">
-                <li class="chip">SQL</li>
-                <li class="chip">IC / t-tests</li>
-                <li class="chip">Fama–MacBeth</li>
-                <li class="chip">EGARCH</li>
-                <li class="chip">HMM</li>
-              </ul>
+            <ul class="xp__bullets">
+              <li>Engineered vectorized Python pipelines for large-scale trade and market data, accelerating research and portfolio analytics</li>
+              <li>Conducted Implementation Shortfall and transaction cost analysis to evaluate execution quality and reduce slippage</li>
+              <li>Developed order–trade reconciliation tools to improve accuracy of portfolio P&amp;L and performance attribution</li>
+              <li>Automated reporting dashboards for trading, P&amp;L attribution, and real-time risk monitoring to support portfolio decisions</li>
+            </ul>
+          </article>
+
+          <!-- Ubiquant QR -->
+          <article class="xp card">
+            <div class="xp__top">
+              <div>
+                <h3 class="xp__role">Quantitative Research Intern – Systematic Equity Strategies</h3>
+                <p class="xp__org">Ubiquant | Summer Quantitative Research Internship</p>
+              </div>
+              <div class="xp__meta">
+                <span class="xp__date">April 2025 – July 2025</span>
+                <span class="xp__loc">Tsinghua Science Park, Beijing</span>
+              </div>
             </div>
-          </div>
+
+            <ul class="xp__bullets">
+              <li>Built SQL-based equity/dividend database and imported data to Python Spyder environment through PYODBC; replicated 101 formulaic alpha signals across large-cap universe with liquidity and volume sample space filters</li>
+              <li>Evaluated alpha factors’ predictive strength using IC hypothesis testing (t-statistics significance) and Fama–MacBeth regressions; retained statistically significant factors for portfolio construction</li>
+              <li>Developed rolling EGARCH volatility forecasts and regime-switching HMM to dynamically adjust allocations across high/low-frequency strategies; constructed a daily trading strategy based on effective factors and volatility severity</li>
+              <li>Backtest (2023–2025) delivered 14.4% cumulative return with positive daily excess returns and controlled drawdowns</li>
+              <li>Integrated MSCI Barra CNE5 multi-factor risk model; applied PCA on return matrices (NumPy-based) to decompose latent risk factors and analyze explained variance; optimized portfolio under risk-parity and exposure constraints, improving Sharpe ratio from 0.9 to 1.2 with 6% maximum drawdown</li>
+            </ul>
+          </article>
+
+          <!-- NCSU Ambassador (Leadership) -->
+          <article class="xp card">
+            <div class="xp__top">
+              <div>
+                <h3 class="xp__role">Program Ambassador (Leadership)</h3>
+                <p class="xp__org">North Carolina State University</p>
+              </div>
+              <div class="xp__meta">
+                <span class="xp__date">Aug 2025 – Dec 2025</span>
+                <span class="xp__loc">Raleigh, NC</span>
+              </div>
+            </div>
+
+            <ul class="xp__bullets">
+              <li>Led a 7-student cohort in a U.S. equities research program, coordinating factor research, daily-frequency trading experiments, and research workflow standards</li>
+              <li>Designed weekly research milestones and review sessions to improve rigor in data handling, signal testing, and portfolio evaluation</li>
+              <li>Presented final findings to industry guest speakers, receiving strong feedback on clarity, methodology, and practical relevance</li>
+            </ul>
+          </article>
 
         </div>
       </div>
     </section>
 
-    <!-- ***** About ***** -->
-    <section class="about" id="about">
+    <!-- ======= About ======= -->
+    <section class="section" id="about">
       <div class="row">
-        <h2>About</h2>
+        <h2 class="section__title">About Me</h2>
 
-        <div class="about__content">
+        <div class="about">
           <div class="about__text">
             <p>
-              I’m JP Peng, a quantitative portfolio analyst with a strong math foundation and hands-on experience building
-              systematic equity research pipelines, volatility forecasting models, and factor risk frameworks. My work style is
-              simple: rigorous statistics, clean data engineering, and risk-aware decision-making.
+              I’m a quant-minded builder who cares about two things: <strong>methodological honesty</strong> and <strong>usable outputs</strong>.
+              I like research that survives contact with reality—clean sample-space definitions, leakage-safe validation,
+              and risk-aware portfolio construction. My comfort zone includes factor discovery and attribution,
+              volatility/regime modeling, and valuation/simulation tooling for decision support.
+            </p>
+            <p>
+              When I’m not modeling, I’m usually tightening pipelines: speeding up experiments, improving reproducibility,
+              and turning “cool results” into something a team can run again next week without drama.
             </p>
 
-            <div class="about__highlights">
-              <div class="highlight">
-                <div class="highlight__k">Core Stack</div>
-                <div class="highlight__v">Python (NumPy/Pandas/SciPy), SQL, scikit-learn, Numba</div>
-              </div>
-              <div class="highlight">
-                <div class="highlight__k">Quant Methods</div>
-                <div class="highlight__v">Monte Carlo, time series, regression, inference, PCA</div>
-              </div>
-              <div class="highlight">
-                <div class="highlight__k">Portfolio</div>
-                <div class="highlight__v">Multi-factor, risk parity, exposure control, attribution</div>
-              </div>
-            </div>
+            <div class="about__actions">
+              <button
+                class="btn btn--primary js-open-pdf"
+                type="button"
+                data-pdf="./resume/JP_PENG_QUANT_RESUME_PORTFOLIO.pdf"
+                aria-haspopup="dialog"
+                aria-controls="pdf-modal"
+              >
+                View Resume
+              </button>
 
-            <div class="about__cta">
-              <a href="./JP_PENG_QUANT_RESUME_PORTFOLIO.pdf" class="btn" target="_blank" rel="noopener noreferrer">
-                Download Resume
-              </a>
-              <a href="#contact" class="btn btn--ghost">Contact</a>
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/jinjiapeng/" target="_blank" rel="noopener">LinkedIn</a>
             </div>
           </div>
 
-          <div class="about__photo-container">
-            <!-- Replace with your photo later -->
-            <img class="about__photo" src="./images/jp-photo-placeholder.jpg" alt="JP Peng photo placeholder" />
+          <div class="about__photo">
+            <img src="./images/JP_Peng.jpg" alt="Portrait of JP Peng" loading="lazy" />
           </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <!-- ***** Contact ***** -->
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
+    <!-- ======= Contact ======= -->
+    <section class="section" id="contact">
+      <div class="row">
+        <h2 class="section__title">Get in Touch</h2>
 
-      <div class="contact__info">
-        <p>
-          Best for: quant roles, research collaborations, portfolio analytics tooling, and anything involving alpha + risk.
-          Email is fastest.
-        </p>
+        <div class="contact card">
+          <p class="contact__text">
+            If you’re hiring or collaborating on systematic research, risk analytics, valuation modeling, or automated trading infrastructure,
+            I’d love to connect. The fastest route is email—also happy to chat on LinkedIn.
+          </p>
 
-        <div class="contact__buttons">
-          <a href="mailto:jpeng7@ncsu.edu" class="btn btn--pink">jpeng7@ncsu.edu</a>
-          <a href="https://linkedin.com/in/jinjiapeng" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">
-            LinkedIn
-          </a>
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="mailto:jinjia.peng1122@gmail.com">jinjia.peng1122@gmail.com</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/jinjiapeng/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn--ghost" href="https://github.com/jppeng-123/Quantitative-Portfolio" target="_blank" rel="noopener">GitHub</a>
+          </div>
+
+          <p class="contact__closing">
+            If it is not the end here, keep advancing foward
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ***** Footer ***** -->
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <ul class="footer__social-links" aria-label="Social links">
-        <li class="footer__social-link-item">
-          <a href="https://github.com/" title="GitHub" target="_blank" rel="noopener noreferrer">
-            <img src="./images/github.svg" class="footer__social-image" alt="GitHub">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://linkedin.com/in/jinjiapeng" title="LinkedIn" target="_blank" rel="noopener noreferrer">
-            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="mailto:jpeng7@ncsu.edu" title="Email">
-            <img src="./images/email.svg" class="footer__social-image" alt="Email">
-          </a>
-        </li>
-      </ul>
+  </main>
 
-      <p class="footer__text">
-        &copy; <span id="year"></span> JP Peng. Built for GitHub Pages.
+  <!-- ======= Footer ======= -->
+  <footer class="footer" role="contentinfo">
+    <div class="row footer__row">
+      <p class="footer__copyright">
+        &copy; <span id="year"></span> JP Peng. Built for clarity, not noise.
       </p>
+
+      <a href="#top" class="back-to-top" title="Back to Top" aria-label="Back to top">
+        <img src="./images/arrow-up.svg" alt="" class="back-to-top__image" />
+      </a>
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top" aria-label="Back to top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image" />
-  </a>
+  <!-- ======= PDF Modal (opens reports/resume in-page) ======= -->
+  <div class="modal" id="pdf-modal" role="dialog" aria-modal="true" aria-labelledby="pdf-modal-title" aria-hidden="true">
+    <div class="modal__overlay js-close-pdf" tabindex="-1" aria-hidden="true"></div>
 
-  <script>
-    // Update footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+    <div class="modal__panel" role="document">
+      <div class="modal__topbar">
+        <h3 class="modal__title" id="pdf-modal-title">Document Viewer</h3>
+
+        <div class="modal__controls">
+          <a class="btn btn--small btn--ghost" id="pdf-open-newtab" href="#" target="_blank" rel="noopener">
+            Open in new tab
+          </a>
+          <button class="btn btn--small btn--primary js-close-pdf" type="button" aria-label="Close viewer">
+            Close
+          </button>
+        </div>
+      </div>
+
+      <div class="modal__body">
+        <iframe
+          id="pdf-frame"
+          class="modal__frame"
+          src=""
+          title="PDF Viewer"
+          loading="lazy"
+        ></iframe>
+
+        <noscript>
+          <p>
+            JavaScript is disabled. Please open the PDF links in a new tab instead.
+          </p>
+        </noscript>
+      </div>
+    </div>
+  </div>
+
   <script src="./index.js"></script>
 </body>
 </html>
