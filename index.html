@@ -15,13 +15,13 @@
   />
   <meta
     name="keywords"
-    content="JP Peng, Quantitative Researcher, Portfolio Analyst, Risk Modeler, Model Validator, Valuation, Python, Barra, PCA, EGARCH, HMM, Monte Carlo, Backtesting"
+    content="JP Peng, Quantitative Researcher, Portfolio Analyst, Risk Modeler, Model Validator, Valuation, Python, Barra, PCA, EGARCH, HMM, Monte Carlo, Backtesting, Black-Scholes PDE"
   />
 </head>
 
 <body>
   <!-- Skip link for accessibility -->
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#home">Skip to content</a>
 
   <!-- ======= Top Ticker (optional animation via CSS) ======= -->
   <div class="ticker" aria-hidden="true">
@@ -40,6 +40,8 @@
       <span class="ticker__dot">•</span>
       <span class="ticker__item">w* = argmin wᵀΣw</span>
       <span class="ticker__dot">•</span>
+      <span class="ticker__item">∂V/∂t + ½σ²S²∂²V/∂S² + rS∂V/∂S − rV = 0</span>
+      <span class="ticker__dot">•</span>
 
       <!-- duplicate set for seamless looping -->
       <span class="ticker__item">SPY +0.37%</span>
@@ -56,14 +58,68 @@
       <span class="ticker__dot">•</span>
       <span class="ticker__item">w* = argmin wᵀΣw</span>
       <span class="ticker__dot">•</span>
+      <span class="ticker__item">∂V/∂t + ½σ²S²∂²V/∂S² + rS∂V/∂S − rV = 0</span>
+      <span class="ticker__dot">•</span>
     </div>
   </div>
 
-  <!-- ======= Header / Hero ======= -->
-  <header class="header" role="banner" id="top">
+  <!-- ======================================================
+       PAGE 1: OPENER (Motto + BM teaser)
+       - Scroll down to reach the actual home page (#home)
+       ====================================================== -->
+  <section class="page page--opener" id="opener">
+    <div class="row opener">
+      <div class="opener__left">
+        <h1 class="opener__motto">
+          Modeling through uncertainty, integrating analytical information, controlling risk exposure
+        </h1>
+
+        <!-- small “animated strip” placeholder: we’ll make it scroll/float via CSS/JS next -->
+        <div class="opener__motion" aria-hidden="true">
+          <span class="opener__motion-text">
+            Quant • Risk • Valuation • Volatility • Factor Attribution • Backtesting • Automation • Derivatives • Monte Carlo • Black–Scholes •
+          </span>
+        </div>
+
+        <div class="opener__hint">
+          <a class="opener__scroll" href="#home" aria-label="Scroll to the home page">
+            Scroll ↓
+          </a>
+        </div>
+      </div>
+
+      <div class="opener__right">
+        <figure class="opener__teaser">
+          <img src="./images/BM.png" alt="Brownian motion teaser chart" loading="eager" />
+          <figcaption>Noise is not the enemy — it’s the environment.</figcaption>
+        </figure>
+
+        <!-- Denser quant formula cloud (CSS will style) -->
+        <div class="formula-cloud formula-cloud--opener" aria-hidden="true">
+          <span class="fx fx--1">dS = μSdt + σSdW</span>
+          <span class="fx fx--2">rₜ = μ + σₜεₜ</span>
+          <span class="fx fx--3">σₜ² = ω + αεₜ₋₁² + βσₜ₋₁²</span>
+          <span class="fx fx--4">IC = corr(factor, rₜ₊ₕ)</span>
+          <span class="fx fx--5">VaR₀.₉₅ = −q₀.₀₅(PnL)</span>
+          <span class="fx fx--6">ES = E[loss | loss ≥ VaR]</span>
+          <span class="fx fx--7">w* = argmin wᵀΣw</span>
+          <span class="fx fx--8">Sharpe = (E[R] − r_f)/σ</span>
+          <span class="fx fx--9">Δ = ∂V/∂S</span>
+          <span class="fx fx--10">Γ = ∂²V/∂S²</span>
+          <span class="fx fx--11">ν = ∂V/∂σ</span>
+          <span class="fx fx--12">∂V/∂t + ½σ²S²∂²V/∂S² + rS∂V/∂S − rV = 0</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       PAGE 2: HOME / HERO (your main homepage)
+       ====================================================== -->
+  <header class="page header" role="banner" id="home">
     <div class="row header__nav">
       <div class="brand">
-        <a class="brand__link" href="#top" aria-label="JP Peng home">
+        <a class="brand__link" href="#home" aria-label="JP Peng home">
           <span class="brand__mark" aria-hidden="true">JP</span>
           <span class="brand__name">Peng</span>
         </a>
@@ -87,11 +143,6 @@
 
         <p class="hero__role">
           Quantitative Researcher / Portfolio Analyst / Data Analyst / Risk Modeler / Model Validator / Valuation Professional
-        </p>
-
-        <p class="hero__motto">
-          <span class="motto__label">Motto:</span>
-          <span class="motto__text">Modeling through uncertainty, integrating analytical information, controlling risk exposure</span>
         </p>
 
         <p class="hero__intro">
@@ -138,21 +189,31 @@
           </ul>
         </div>
 
-        <!-- Decorative formulas (CSS can float/fade them) -->
-        <div class="formula-cloud" aria-hidden="true">
+        <!-- Expanded formula cloud (hero) -->
+        <div class="formula-cloud formula-cloud--hero" aria-hidden="true">
           <span class="fx fx--1">rₜ = μ + σₜεₜ</span>
           <span class="fx fx--2">σₜ² = ω + αεₜ₋₁² + βσₜ₋₁²</span>
           <span class="fx fx--3">IC = corr(factor, rₜ₊ₕ)</span>
-          <span class="fx fx--4">VaR₀.₉₅ = -q₀.₀₅(PnL)</span>
+          <span class="fx fx--4">VaR = −qα(PnL)</span>
+          <span class="fx fx--5">ES = E[loss | loss ≥ VaR]</span>
+          <span class="fx fx--6">R = Xβ + ε</span>
+          <span class="fx fx--7">Σ = QΛQᵀ</span>
+          <span class="fx fx--8">PC = XQ</span>
+          <span class="fx fx--9">Δ = ∂V/∂S</span>
+          <span class="fx fx--10">Γ = ∂²V/∂S²</span>
+          <span class="fx fx--11">∂V/∂t + ½σ²S²∂²V/∂S² + rS∂V/∂S − rV = 0</span>
+          <span class="fx fx--12">C = SN(d₁) − Ke^{−rT}N(d₂)</span>
         </div>
       </aside>
     </div>
   </header>
 
-  <main id="main" role="main">
+  <main role="main">
 
-    <!-- ======= Projects ======= -->
-    <section class="section" id="projects">
+    <!-- ======================================================
+         PAGE 3: Projects
+         ====================================================== -->
+    <section class="page section" id="projects">
       <div class="row">
         <h2 class="section__title">Selected Projects</h2>
         <p class="section__subtitle">
@@ -203,8 +264,8 @@
               </figure>
 
               <figure class="media media--secondary">
-                <img src="./images/strategy_return.jpg" alt="Strategy cumulative returns chart" loading="lazy" />
-                <figcaption>Cumulative return profile (strategy vs benchmark vs hedged) — performance context.</figcaption>
+                <img src="./images/PCA.png" alt="PCA visualization teaser" loading="lazy" />
+                <figcaption>Factor decomposition teaser (PCA) — variance drivers & structure.</figcaption>
               </figure>
             </div>
           </article>
@@ -241,13 +302,13 @@
 
             <div class="project__media">
               <figure class="media">
-                <img src="./images/return_simulation.png" alt="Convergence of expected winnings / simulation convergence chart" loading="lazy" />
+                <img src="./images/return_simulation.png" alt="Simulation convergence chart" loading="lazy" />
                 <figcaption>Simulation convergence & stability diagnostics.</figcaption>
               </figure>
 
               <figure class="media media--secondary">
                 <img src="./images/MC.png" alt="Monte Carlo simulation plot" loading="lazy" />
-                <figcaption>Monte Carlo path-based outcome distribution for tail analysis.</figcaption>
+                <figcaption>Monte Carlo path-based distribution for tail analysis.</figcaption>
               </figure>
             </div>
           </article>
@@ -269,7 +330,7 @@
               </div>
 
               <div class="project__actions">
-                <!-- IMPORTANT: the '&' in filename must be URL-encoded as %26 -->
+                <!-- IMPORTANT: '&' must be URL-encoded as %26 -->
                 <button
                   class="btn btn--small btn--primary js-open-pdf"
                   type="button"
@@ -289,8 +350,8 @@
               </figure>
 
               <figure class="media media--secondary">
-                <img src="./images/BM.png" alt="Brownian motion paths illustration" loading="lazy" />
-                <figcaption>Stochastic process intuition (used across simulation + modeling).</figcaption>
+                <img src="./images/Corr.png" alt="Correlation structure teaser" loading="lazy" />
+                <figcaption>Structure diagnostics — correlation & redundancy awareness.</figcaption>
               </figure>
             </div>
           </article>
@@ -299,10 +360,13 @@
       </div>
     </section>
 
-    <!-- ======= Experience ======= -->
-    <section class="section" id="experience">
+    <!-- ======================================================
+         PAGE 4: Experience
+         ====================================================== -->
+    <section class="page section" id="experience">
       <div class="row">
         <h2 class="section__title">Experience</h2>
+
         <div class="timeline">
 
           <!-- Ubiquant QD -->
@@ -346,6 +410,59 @@
               <li>Backtest (2023–2025) delivered 14.4% cumulative return with positive daily excess returns and controlled drawdowns</li>
               <li>Integrated MSCI Barra CNE5 multi-factor risk model; applied PCA on return matrices (NumPy-based) to decompose latent risk factors and analyze explained variance; optimized portfolio under risk-parity and exposure constraints, improving Sharpe ratio from 0.9 to 1.2 with 6% maximum drawdown</li>
             </ul>
+
+            <!-- Strategy Return plot moved HERE per your instruction -->
+            <div class="xp__figure">
+              <figure class="media">
+                <img src="./images/strategy_return.jpg" alt="Strategy cumulative returns chart" loading="lazy" />
+                <figcaption>Strategy vs benchmark vs hedged cumulative returns (2023–2025 backtest).</figcaption>
+              </figure>
+            </div>
+
+            <!-- Backtest report block (translated) -->
+            <div class="xp__report card card--glass">
+              <h4 class="xp__report-title">Backtest Summary</h4>
+
+              <div class="xp__report-grid">
+                <div class="xp__report-col">
+                  <p class="xp__report-head">Performance Report</p>
+                  <ul class="xp__report-list">
+                    <li><span>Start NAV</span><span>100,000,000.00</span></li>
+                    <li><span>End NAV</span><span>114,399,148.42</span></li>
+                    <li><span>Total Return</span><span>14.40%</span></li>
+                    <li><span>Annualized Return</span><span>5.66%</span></li>
+                    <li><span>Annualized Volatility</span><span>27.27%</span></li>
+                    <li><span>Sharpe Ratio</span><span>0.21</span></li>
+                    <li><span>Max Drawdown</span><span>-10.30%</span></li>
+                  </ul>
+                </div>
+
+                <div class="xp__report-col">
+                  <p class="xp__report-head">Benchmark Comparison</p>
+                  <ul class="xp__report-list">
+                    <li><span>Index Total Return</span><span>-4.95%</span></li>
+                    <li><span>Strategy Total Return</span><span>14.40%</span></li>
+                    <li><span>Hedged Total Return</span><span>19.48%</span></li>
+                    <li><span>Average Daily Excess</span><span>0.0330%</span></li>
+                  </ul>
+                  <p class="xp__report-foot">
+                    On average, the strategy outperformed the CSI 1000 Index by approximately <strong>0.03%</strong> per trading day.
+                  </p>
+                </div>
+              </div>
+
+              <div class="xp__report-actions">
+                <button
+                  class="btn btn--small btn--primary js-open-pdf"
+                  type="button"
+                  data-pdf="./pdf/Multi_Alpha_Vol_Driven_Trading_Strategy.pdf"
+                  aria-haspopup="dialog"
+                  aria-controls="pdf-modal"
+                >
+                  Click to View Report
+                </button>
+              </div>
+            </div>
           </article>
 
           <!-- NCSU Ambassador (Leadership) -->
@@ -372,8 +489,10 @@
       </div>
     </section>
 
-    <!-- ======= About ======= -->
-    <section class="section" id="about">
+    <!-- ======================================================
+         PAGE 5: About
+         ====================================================== -->
+    <section class="page section" id="about">
       <div class="row">
         <h2 class="section__title">About Me</h2>
 
@@ -382,12 +501,17 @@
             <p>
               I’m a quant-minded builder who cares about two things: <strong>methodological honesty</strong> and <strong>usable outputs</strong>.
               I like research that survives contact with reality—clean sample-space definitions, leakage-safe validation,
-              and risk-aware portfolio construction. My comfort zone includes factor discovery and attribution,
-              volatility/regime modeling, and valuation/simulation tooling for decision support.
+              and risk-aware portfolio construction.
             </p>
+
+            <p>
+              My core interests include factor discovery & attribution, volatility/regime modeling, portfolio risk exposure control,
+              and valuation/simulation tools that support robust decision-making under uncertainty.
+            </p>
+
             <p>
               When I’m not modeling, I’m usually tightening pipelines: speeding up experiments, improving reproducibility,
-              and turning “cool results” into something a team can run again next week without drama.
+              and turning results into something a team can run again next week without drama.
             </p>
 
             <div class="about__actions">
@@ -412,8 +536,10 @@
       </div>
     </section>
 
-    <!-- ======= Contact ======= -->
-    <section class="section" id="contact">
+    <!-- ======================================================
+         PAGE 6: Contact
+         ====================================================== -->
+    <section class="page section" id="contact">
       <div class="row">
         <h2 class="section__title">Get in Touch</h2>
 
@@ -428,10 +554,30 @@
             <a class="btn btn--ghost" href="https://www.linkedin.com/in/jinjiapeng/" target="_blank" rel="noopener">LinkedIn</a>
             <a class="btn btn--ghost" href="https://github.com/jppeng-123/Quantitative-Portfolio" target="_blank" rel="noopener">GitHub</a>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <p class="contact__closing">
+    <!-- ======================================================
+         PAGE 7: Closing (big ending line + MC teaser)
+         ====================================================== -->
+    <section class="page page--closing" id="closing">
+      <div class="row closing">
+        <div class="closing__left">
+          <h2 class="closing__line">
             If it is not the end here, keep advancing foward
-          </p>
+          </h2>
+        </div>
+
+        <div class="closing__right">
+          <figure class="closing__teaser">
+            <img src="./images/MC.png" alt="Monte Carlo teaser chart" loading="lazy" />
+            <figcaption>Close with distribution, not a single path.</figcaption>
+          </figure>
+        </div>
+
+        <div class="closing__back">
+          <a href="#opener" class="btn btn--ghost">Back to top</a>
         </div>
       </div>
     </section>
@@ -445,7 +591,7 @@
         &copy; <span id="year"></span> JP Peng. Built for clarity, not noise.
       </p>
 
-      <a href="#top" class="back-to-top" title="Back to Top" aria-label="Back to top">
+      <a href="#opener" class="back-to-top" title="Back to Top" aria-label="Back to top">
         <img src="./images/arrow-up.svg" alt="" class="back-to-top__image" />
       </a>
     </div>
@@ -479,9 +625,7 @@
         ></iframe>
 
         <noscript>
-          <p>
-            JavaScript is disabled. Please open the PDF links in a new tab instead.
-          </p>
+          <p>JavaScript is disabled. Please open the PDF links in a new tab instead.</p>
         </noscript>
       </div>
     </div>
