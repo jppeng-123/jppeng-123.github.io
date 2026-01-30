@@ -1,4 +1,3 @@
-```js
 /* =========================================================
    JP Peng — Portfolio JS
    - Keyboard focus outline only for keyboard users
@@ -166,4 +165,3 @@ window.addEventListener("keydown", (e) => {
     first.focus();
   }
 });
-```
