@@ -1,57 +1,68 @@
 /* =========================================================
    JP Peng — index.js (Static, professional)
-   Per your latest requirement:
-   - REMOVE all scroll/page transition animations
-   - Keep only:
-     (1) Keyboard-only focus outlines (accessibility standard)
-     (2) Back-to-top button show/hide (clean + minimal)
-     (3) Footer year auto-update
+   Keeps only:
+   (1) Keyboard-only focus outlines (accessibility standard)
+   (2) Back-to-top button show/hide (minimal + smooth)
+   (3) Footer year auto-update
+   No scroll/section transition animations.
    ========================================================= */
 
-/* -----------------------------------------
-   1) Focus outline only for keyboard users
------------------------------------------- */
-function handleFirstTab(e) {
-  if (e.key === "Tab") {
+(() => {
+  "use strict";
+
+  /* -----------------------------------------
+     1) Focus outline only for keyboard users
+  ------------------------------------------ */
+  function enableKeyboardFocus() {
     document.body.classList.add("user-is-tabbing");
-    window.removeEventListener("keydown", handleFirstTab);
-    window.addEventListener("mousedown", handleMouseDownOnce);
   }
-}
 
-function handleMouseDownOnce() {
-  document.body.classList.remove("user-is-tabbing");
-  window.removeEventListener("mousedown", handleMouseDownOnce);
-  window.addEventListener("keydown", handleFirstTab);
-}
+  function disableKeyboardFocus() {
+    document.body.classList.remove("user-is-tabbing");
+  }
 
-window.addEventListener("keydown", handleFirstTab);
+  function onKeyDown(e) {
+    // Show focus rings only when user starts navigating via keyboard.
+    // Cover Tab + arrow keys for better accessibility behavior.
+    const keysThatSuggestKeyboardNav = ["Tab", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"];
+    if (keysThatSuggestKeyboardNav.includes(e.key)) enableKeyboardFocus();
+  }
 
-/* -----------------------------------------
-   2) Back to top button toggle
------------------------------------------- */
-const backToTopButton = document.querySelector(".back-to-top");
+  function onMouseDown() {
+    disableKeyboardFocus();
+  }
 
-function setBackToTopVisible(visible) {
-  if (!backToTopButton) return;
-  backToTopButton.style.visibility = visible ? "visible" : "hidden";
-  backToTopButton.style.opacity = visible ? "1" : "0";
-  backToTopButton.style.transform = visible ? "scale(1)" : "scale(0.92)";
-}
+  window.addEventListener("keydown", onKeyDown, { passive: true });
+  window.addEventListener("mousedown", onMouseDown, { passive: true });
+  window.addEventListener("touchstart", onMouseDown, { passive: true });
 
-function onScroll() {
-  // show after a modest scroll; tuned for your layout
-  const show = window.scrollY > 520;
-  setBackToTopVisible(show);
-}
+  /* -----------------------------------------
+     2) Back to top button toggle
+  ------------------------------------------ */
+  const backToTopButton = document.querySelector(".back-to-top");
 
-window.addEventListener("scroll", onScroll, { passive: true });
-onScroll(); // initialize state
+  function setBackToTopVisible(visible) {
+    if (!backToTopButton) return;
+    backToTopButton.style.visibility = visible ? "visible" : "hidden";
+    backToTopButton.style.opacity = visible ? "1" : "0";
+    backToTopButton.style.transform = visible ? "scale(1)" : "scale(0.92)";
+  }
 
-/* -----------------------------------------
-   3) Footer year (auto)
------------------------------------------- */
-const yearEl = document.getElementById("year");
-if (yearEl) {
-  yearEl.textContent = String(new Date().getFullYear());
-}
+  // show after a modest scroll; a bit lower than before to match the new top hero layout
+  const SHOW_AFTER_PX = 420;
+
+  function onScroll() {
+    setBackToTopVisible(window.scrollY > SHOW_AFTER_PX);
+  }
+
+  if (backToTopButton) {
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll(); // initialize state
+  }
+
+  /* -----------------------------------------
+     3) Footer year (auto)
+  ------------------------------------------ */
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+})();
