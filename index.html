@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="JP Peng — AI & Quant Finance Analyst | Predictive Modeling, Valuation & Investment Analytics" />
-  <meta name="keywords" content="JP Peng, Quant Finance, Predictive Modeling, Valuation, Investment Analytics, Portfolio Analytics, Risk Modeling, Python, Monte Carlo, Black-Scholes, EGARCH, HMM, PCA, Barra" />
+  <meta name="keywords" content="JP Peng, Quant Finance, Predictive Modeling, Valuation, Investment Analytics, Portfolio Analytics, Risk Modeling, Python" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
   <link rel="stylesheet" href="index.css" />
   <title>JP Peng | AI & Quant Finance Analyst</title>
@@ -14,11 +14,12 @@
   <a class="skip-link" href="#home">Skip to content</a>
 
   <!-- =========================
-       TOP HERO (clean + unified)
-       - Smaller photo
-       - Contact pills uniform size
-       - Two primary buttons same style
-       - No jump arrows
+       TOP HERO
+       - No image crop
+       - Less empty space
+       - Email/Phone written out clearly
+       - LinkedIn/GitHub as same-style primary buttons
+       - Remove Contact section entirely
      ========================= -->
   <header class="header" role="banner" id="home">
     <div class="row header__nav">
@@ -32,44 +33,52 @@
           <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
           <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
           <li class="nav__item"><a class="nav__link" href="#experience">Experience</a></li>
-          <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
 
     <div class="row hero">
+      <!-- Left -->
       <div class="hero__left">
         <p class="hero__eyebrow">AI • Quant Finance • Investment Analytics</p>
+
         <h1 class="hero__title">JP Peng</h1>
 
         <p class="hero__role">
           AI &amp; Quant Finance Analyst | Predictive Modeling, Valuation &amp; Investment Analytics
         </p>
 
+        <!-- Primary actions (same style) -->
         <div class="hero__cta">
-          <a class="btn btn--primary" href="./resume/JP_PENG_QUANT_RESUME_PORTFOLIO.pdf" target="_blank" rel="noopener">View Resume</a>
-          <a class="btn btn--primary" href="#projects">View Projects</a>
+          <a class="btn btn--primary" href="./resume/JP_PENG_QUANT_RESUME_PORTFOLIO.pdf" target="_blank" rel="noopener">Resume</a>
+          <a class="btn btn--primary" href="#projects">Projects</a>
+          <a class="btn btn--primary" href="https://www.linkedin.com/in/jinjiapeng/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--primary" href="https://github.com/jppeng-123" target="_blank" rel="noopener">GitHub</a>
         </div>
 
-        <!-- Uniform-size contact pills -->
-        <div class="meta" aria-label="Contact information">
-          <a class="pill" href="mailto:jinjia.peng1122@gmail.com">Email</a>
-          <span class="pill" aria-label="Phone">Phone</span>
-          <a class="pill" href="https://www.linkedin.com/in/jinjiapeng/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="pill" href="https://github.com/jppeng-123" target="_blank" rel="noopener">GitHub</a>
+        <!-- Contact info written out (bright, readable) -->
+        <div class="hero__contact" aria-label="Contact info">
+          <div class="contactline">
+            <span class="contactlabel">Email:</span>
+            <a class="contactvalue" href="mailto:jinjia.peng1122@gmail.com">jinjia.peng1122@gmail.com</a>
+          </div>
+          <div class="contactline">
+            <span class="contactlabel">Phone:</span>
+            <span class="contactvalue">(626) 650-8800</span>
+          </div>
         </div>
 
-        <!-- Optional small line under pills; keep clean -->
-        <p class="meta__detail">
-          <span class="muted">jinjia.peng1122@gmail.com</span>
-          <span class="sep">•</span>
-          <span class="muted">(626) 650-8800</span>
-        </p>
+        <!-- Optional: keep it minimal, but this helps fill left whitespace cleanly -->
+        <div class="hero__micro">
+          Quant research workflows • Robust validation • Practical tradability
+        </div>
       </div>
 
+      <!-- Right -->
       <aside class="hero__right" aria-label="Profile card">
         <div class="card card--glass profile">
           <figure class="profile__photo">
+            <!-- IMPORTANT: no crop -->
             <img src="./images/JP_Peng.jpg" alt="JP Peng portrait" />
           </figure>
 
@@ -101,7 +110,7 @@
           <div class="about__text">
             <p>
               I build research-to-decision workflows that turn market and fundamental data into interpretable signals,
-              valuation insights, and risk-aware portfolio actions. Emphasis: leakage-safe evaluation, clear diagnostics,
+              valuation insights, and risk-aware portfolio actions — emphasizing leakage-safe evaluation, diagnostics,
               and practical tradability.
             </p>
 
@@ -129,7 +138,6 @@
         </p>
 
         <div class="grid grid--projects">
-
           <article class="project card card--glass">
             <h3 class="project__title">Systematic Equity Alpha Research Pipeline</h3>
             <p class="project__desc">
@@ -201,7 +209,6 @@
               <img src="./images/PCA.png" alt="PCA analysis visualization" />
             </figure>
           </article>
-
         </div>
       </div>
     </section>
@@ -217,7 +224,6 @@
         </p>
 
         <div class="timeline">
-
           <article class="xp card card--glass">
             <div class="xp__top">
               <div>
@@ -245,11 +251,11 @@
             </div>
 
             <ul class="xp__bullets">
-              <li>Replicated 101 formulaic alpha signals with liquidity/volume filters; SQL + PYODBC research workflow</li>
+              <li>Replicated 101 formulaic alpha signals with liquidity/volume filters; SQL + PYODBC workflow</li>
               <li>IC hypothesis testing + Fama–MacBeth regressions to retain statistically significant factors</li>
               <li>Rolling EGARCH + regime-switching HMM to adapt allocations across regimes</li>
               <li>Backtest (2023–2025) delivered 14.4% cumulative return with controlled drawdowns</li>
-              <li>Integrated Barra-style risk + PCA decomposition; improved Sharpe 0.9 → 1.2 under exposure constraints</li>
+              <li>Integrated Barra-style risk + PCA decomposition; improved Sharpe 0.9 → 1.2 under constraints</li>
             </ul>
 
             <figure class="media xp__figure">
@@ -268,28 +274,10 @@
 
             <ul class="xp__bullets">
               <li>Led 7-person cohort for equity research, factor validation, and rolling experiments</li>
-              <li>Built workflow for cleaning, validation, and performance attribution; coordinated weekly reviews</li>
+              <li>Built workflow for cleaning, validation, and performance attribution; coordinated reviews</li>
               <li>Presented findings to industry guests with emphasis on rigor and applicability</li>
             </ul>
           </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================
-         CONTACT (minimal)
-     ========================= -->
-    <section class="section" id="contact" aria-label="Contact">
-      <div class="row">
-        <h2 class="section__title">Contact</h2>
-
-        <div class="contact card card--glass">
-          <div class="contact__actions">
-            <a class="btn btn--ghost" href="mailto:jinjia.peng1122@gmail.com">Email</a>
-            <a class="btn btn--ghost" href="https://www.linkedin.com/in/jinjiapeng/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn btn--ghost" href="https://github.com/jppeng-123" target="_blank" rel="noopener">GitHub</a>
-          </div>
         </div>
       </div>
     </section>
