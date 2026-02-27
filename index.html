@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="JP Peng — Quantitative Researcher / Portfolio Analyst / Risk Modeler / Model Validator / Valuation Professional" />
-  <meta name="keywords" content="JP Peng, Quantitative Research, Portfolio Analytics, Risk Modeling, Model Validation, Valuation, Python, Monte Carlo, Black-Scholes, EGARCH, HMM, PCA, Barra" />
+  <meta name="description" content="JP Peng — AI & Quant Finance Analyst | Predictive Modeling, Valuation & Investment Analytics" />
+  <meta name="keywords" content="JP Peng, Quantitative Research, Predictive Modeling, Valuation, Investment Analytics, Portfolio Analytics, Risk Modeling, Python, Monte Carlo, Black-Scholes, EGARCH, HMM, PCA, Barra" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
   <link rel="stylesheet" href="index.css" />
-  <title>JP Peng | Quantitative Research & Portfolio Analytics</title>
+  <title>JP Peng | AI & Quant Finance Analyst</title>
 </head>
 
 <body>
@@ -16,9 +16,9 @@
 
   <!-- =========================
        TOP HERO (JP INFO + JUMP LINKS)
-       - Remove "Enter" friction
-       - Put your identity first
-       - Provide jump links to sections (common layout)
+       - Photo on first page
+       - No "Get in touch" button
+       - Direct contact links on hero
      ========================= -->
   <header class="header header--top" role="banner" id="home">
     <div class="row header__nav">
@@ -39,35 +39,39 @@
 
     <div class="row hero hero--top">
       <div class="hero__left">
-        <p class="hero__eyebrow">Quantitative Research • Portfolio Analytics • Risk Modeling</p>
+        <p class="hero__eyebrow">AI • Quant Finance • Investment Analytics</p>
 
         <h1 class="hero__title">JP Peng</h1>
 
         <p class="hero__role">
-          Quantitative Researcher / Portfolio Analyst / Data Analyst / Risk Modeler / Model Validator / Valuation Professional
-        </p>
-
-        <p class="hero__intro">
-          M.S. in Financial Mathematics at NC State University, with a B.S. in Mathematics and a B.A. in Business Administration (Finance emphasis) from UC Irvine.
-          I build research-grade pipelines spanning Monte Carlo simulation, derivatives modeling (Black–Scholes PDE), Greeks hedging,
-          and time-series volatility/regime analysis. Proficient in Python for quantitative research (NumPy, Pandas, SciPy, Scikit-learn),
-          and experienced with R, MATLAB, and Bloomberg Terminal for large-scale financial data analysis and model validation.
+          AI &amp; Quant Finance Analyst | Predictive Modeling, Valuation &amp; Investment Analytics
         </p>
 
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#contact">Get in touch</a>
           <a class="btn btn--ghost" href="./resume/JP_PENG_QUANT_RESUME_PORTFOLIO.pdf" target="_blank" rel="noopener">View Resume</a>
+          <a class="btn btn--primary" href="#projects">View Projects</a>
         </div>
 
-        <div class="hero__meta">
-          <span>Los Angeles, CA</span>
-          <span class="hero__sep">•</span>
-          <a href="mailto:jinjia.peng1122@gmail.com">jinjia.peng1122@gmail.com</a>
-          <span class="hero__sep">•</span>
-          <span>(626) 650-8800</span>
+        <!-- Direct contact links (no location) -->
+        <div class="hero__meta hero__meta--links" aria-label="Contact links">
+          <a class="meta-pill" href="mailto:jinjia.peng1122@gmail.com" aria-label="Email">
+            Email: jinjia.peng1122@gmail.com
+          </a>
+
+          <span class="meta-pill" aria-label="Phone">
+            Phone: (626) 650-8800
+          </span>
+
+          <a class="meta-pill" href="https://www.linkedin.com/in/jinjiapeng/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            LinkedIn
+          </a>
+
+          <a class="meta-pill" href="https://github.com/jppeng-123" target="_blank" rel="noopener" aria-label="GitHub">
+            GitHub
+          </a>
         </div>
 
-        <!-- Jump links (redundant but intentional: common UX pattern) -->
+        <!-- Jump links -->
         <div class="jump">
           <a class="jump__link" href="#about">About ↓</a>
           <span class="jump__sep">•</span>
@@ -77,17 +81,23 @@
         </div>
       </div>
 
-      <aside class="hero__right" aria-label="Highlights">
-        <div class="card card--glass hero__focus">
-          <h2 class="card__title">Current Focus</h2>
-          <ul class="card__list">
-            <li>Volatility analysis</li>
-            <li>Factor attribution</li>
-            <li>Portfolio risk exposure control</li>
-            <li>Rolling-strategy backtesting</li>
-            <li>Automated trading</li>
-            <li>Financial instruments valuation</li>
-          </ul>
+      <!-- Right side: PHOTO + Focus -->
+      <aside class="hero__right" aria-label="Profile and highlights">
+        <div class="card card--glass hero__profile">
+          <figure class="hero__photo">
+            <img src="./images/JP_Peng.jpg" alt="JP Peng portrait" />
+          </figure>
+
+          <div class="hero__focus">
+            <h2 class="card__title">Current Focus</h2>
+            <ul class="card__list">
+              <li>Predictive modeling for cross-sectional signals</li>
+              <li>Valuation frameworks &amp; scenario analysis</li>
+              <li>Factor attribution &amp; robustness testing</li>
+              <li>Portfolio construction under constraints</li>
+              <li>Execution-aware backtesting &amp; reporting</li>
+            </ul>
+          </div>
         </div>
       </aside>
     </div>
@@ -96,7 +106,7 @@
   <main role="main">
 
     <!-- =========================
-         ABOUT (now immediately after JP section)
+         ABOUT (right after hero)
      ========================= -->
     <section class="section section--first" id="about" aria-label="About">
       <div class="row">
@@ -105,32 +115,26 @@
         <div class="about">
           <div class="about__text">
             <p>
-              I’m a quantitative researcher focused on turning noisy market data into measurable signals, risk-aware portfolios, and
-              deployable research workflows. My work emphasizes leakage-safe validation, interpretable diagnostics, and disciplined exposure control —
-              so results remain credible out-of-sample and actionable under constraints.
-            </p>
-            <p>
-              I’m especially interested in volatility modeling and regime behavior (EGARCH / regime switching), factor attribution
-              (IC testing, Fama–MacBeth), and portfolio optimization under exposure constraints (risk parity, multi-factor control).
-              I also enjoy bridging model logic with “real-world tradability”: transaction costs, execution quality, and automated reporting.
+              I build research-to-decision workflows that turn market and fundamental data into interpretable signals,
+              valuation insights, and risk-aware portfolio actions. My work emphasizes leakage-safe evaluation, clear diagnostics,
+              and practical tradability.
             </p>
 
             <div class="about__actions">
               <a class="btn btn--primary" href="./resume/JP_PENG_QUANT_RESUME_PORTFOLIO.pdf" target="_blank" rel="noopener">View Resume</a>
-              <a class="btn btn--ghost" href="#contact">Contact</a>
+              <a class="btn btn--ghost" href="#projects">Projects</a>
             </div>
           </div>
 
           <figure class="about__photo">
-            <img src="./images/JP_Peng.jpg" alt="JP Peng portrait (JP_Peng.jpg)" />
+            <img src="./images/gbm.png" alt="Brownian motion paths teaser" />
           </figure>
         </div>
       </div>
     </section>
 
     <!-- =========================
-         OPTIONAL VISUAL / MOTTO (moved down; no “Enter”)
-         - Keeps your “quant vibe” but after identity + about
+         QUANT VISUAL (optional)
      ========================= -->
     <section class="opening opening--inline" id="top" aria-label="Quant visual">
       <div class="row opening__grid">
@@ -157,22 +161,9 @@
 
             <div class="formula-board__grid">
               <div class="fx">dS<sub>t</sub> = μS<sub>t</sub>dt + σS<sub>t</sub>dW<sub>t</sub></div>
-              <div class="fx">dX<sub>t</sub> = (μ − ½σ²)dt + σdW<sub>t</sub></div>
               <div class="fx">V = S·N(d<sub>1</sub>) − Ke<sup>−rT</sup>N(d<sub>2</sub>)</div>
-              <div class="fx">d<sub>1</sub> = [ln(S/K) + (r + ½σ²)T] / (σ√T)</div>
-              <div class="fx">d<sub>2</sub> = d<sub>1</sub> − σ√T</div>
-
-              <div class="fx fx--wide">
-                ∂V/∂t + ½σ²S²·∂²V/∂S² + rS·∂V/∂S − rV = 0
-              </div>
-
-              <div class="fx">Δ = ∂V/∂S</div>
-              <div class="fx">Γ = ∂²V/∂S²</div>
-              <div class="fx">Vega = ∂V/∂σ</div>
-              <div class="fx">Sharpe = (E[R] − r<sub>f</sub>)/σ</div>
+              <div class="fx fx--wide">∂V/∂t + ½σ²S²·∂²V/∂S² + rS·∂V/∂S − rV = 0</div>
               <div class="fx">IC = corr(factor, r<sub>t+H</sub>)</div>
-              <div class="fx">t = mean(IC) / (std(IC)/√N)</div>
-              <div class="fx">w* ∝ Σ<sup>−1</sup>μ</div>
               <div class="fx">VaR<sub>α</sub> = −Quantile<sub>α</sub>(P&amp;L)</div>
             </div>
           </div>
@@ -181,19 +172,19 @@
 
       <div class="row opening__bm">
         <figure class="media media--hero">
-          <img src="./images/gbm.png" alt="Brownian motion paths teaser" />
+          <img src="./images/equation.png" alt="Quant equation teaser" />
         </figure>
       </div>
     </section>
 
     <!-- =========================
-         PROJECTS (moved further down)
+         PROJECTS
      ========================= -->
     <section class="section" id="projects" aria-label="Selected projects">
       <div class="row">
         <h2 class="section__title">Selected Projects</h2>
         <p class="section__subtitle">
-          Clean, research-grade deliverables with leakage-safe evaluation, interpretable diagnostics, and report-ready outputs.
+          Research-grade deliverables with leakage-safe evaluation, interpretable diagnostics, and report-ready outputs.
         </p>
 
         <div class="grid grid--projects">
@@ -201,8 +192,7 @@
           <article class="project card card--glass">
             <h3 class="project__title">Systematic Equity Alpha Research Pipeline</h3>
             <p class="project__desc">
-              A leakage-safe alpha discovery workflow for systematic equities: factor construction, IC / t-stat screening,
-              attribution diagnostics, and robust research reporting designed for repeatable deployment.
+              Leakage-safe alpha discovery workflow: factor construction, IC/t-stat screening, attribution diagnostics, and reporting.
             </p>
 
             <div class="tagrow" aria-label="Project tags">
@@ -214,20 +204,19 @@
 
             <div class="project__actions">
               <a class="btn btn--small btn--primary" href="./pdf/Multi_Alpha_Vol_Driven_Trading_Strategy.pdf" target="_blank" rel="noopener">
-                Click to view report
+                View report
               </a>
             </div>
 
             <figure class="media project__single">
-              <img src="./images/Corr.png" alt="Alpha correlation heatmap (Corr.png)" />
+              <img src="./images/Corr.png" alt="Alpha correlation heatmap" />
             </figure>
           </article>
 
           <article class="project card card--glass">
             <h3 class="project__title">Equity Modeling via Monte Carlo Simulation (iSoftStone)</h3>
             <p class="project__desc">
-              Built Monte Carlo simulation frameworks to model stock dynamics and risk distribution, supporting scenario analysis,
-              tail-risk understanding, and research-grade reporting.
+              Monte Carlo simulation frameworks for stock dynamics and risk distribution, supporting scenario and tail-risk analysis.
             </p>
 
             <div class="tagrow" aria-label="Project tags">
@@ -239,37 +228,36 @@
 
             <div class="project__actions">
               <a class="btn btn--small btn--primary" href="./pdf/iSoftStone_Information_Technology_Stock_Analysis.pdf" target="_blank" rel="noopener">
-                Click to view report
+                View report
               </a>
             </div>
 
             <figure class="media project__single">
-              <img src="./images/return_simulation.png" alt="Return simulation visualization (return_simulation.png)" />
+              <img src="./images/return_simulation.png" alt="Return simulation visualization" />
             </figure>
           </article>
 
           <article class="project card card--glass">
             <h3 class="project__title">PCA Factor Decomposition on S&amp;P 500</h3>
             <p class="project__desc">
-              Applied PCA on return matrices to extract latent risk factors, quantify explained variance, and support
-              factor attribution and risk decomposition workflows.
+              PCA on return matrices to extract latent risk factors, quantify explained variance, and support risk decomposition.
             </p>
 
             <div class="tagrow" aria-label="Project tags">
               <span class="tag">PCA</span>
-              <span class="tag">Factor Attribution</span>
-              <span class="tag">Risk Decomposition</span>
+              <span class="tag">Attribution</span>
+              <span class="tag">Risk</span>
               <span class="tag">NumPy</span>
             </div>
 
             <div class="project__actions">
               <a class="btn btn--small btn--primary" href="./pdf/PCAS&amp;P500_Stock_Analysis.pdf" target="_blank" rel="noopener">
-                Click to view report
+                View report
               </a>
             </div>
 
             <figure class="media project__single">
-              <img src="./images/PCA.png" alt="PCA analysis visualization (PCA.png)" />
+              <img src="./images/PCA.png" alt="PCA analysis visualization" />
             </figure>
           </article>
 
@@ -278,13 +266,13 @@
     </section>
 
     <!-- =========================
-         EXPERIENCE (moved further down)
+         EXPERIENCE
      ========================= -->
     <section class="section" id="experience" aria-label="Experience">
       <div class="row">
         <h2 class="section__title">Experience</h2>
         <p class="section__subtitle">
-          Internship experience in systematic equity research, data pipelines, execution analytics, and portfolio/risk reporting.
+          Internship experience in systematic research, data pipelines, execution analytics, and risk reporting.
         </p>
 
         <div class="timeline">
@@ -322,47 +310,14 @@
             <ul class="xp__bullets">
               <li>Built SQL-based equity/dividend database and imported data to Python Spyder environment through PYODBC; replicated 101 formulaic alpha signals across large-cap universe with liquidity and volume sample space filters</li>
               <li>Evaluated alpha factors’ predictive strength using IC hypothesis testing (t-statistics significance) and Fama–MacBeth regressions; retained statistically significant factors for portfolio construction</li>
-              <li>Developed rolling EGARCH volatility forecasts and regime-switching HMM to dynamically adjust allocations across high/low-frequency strategies; constructed a daily trading strategy based on effective factors and volatility severity</li>
-              <li>Backtest (2023–2025) delivered 14.4% cumulative return with positive daily excess returns and controlled drawdowns</li>
-              <li>Integrated MSCI Barra CNE5 multi-factor risk model; applied PCA on return matrices (NumPy-based) to decompose latent risk factors and analyze explained variance; optimized portfolio under risk-parity and exposure constraints, improving Sharpe ratio from 0.9 to 1.2 with 6% maximum drawdown</li>
+              <li>Developed rolling EGARCH volatility forecasts and regime-switching HMM to dynamically adjust allocations; constructed a daily trading strategy based on effective factors and volatility severity</li>
+              <li>Backtest (2023–2025) delivered 14.4% cumulative return with controlled drawdowns</li>
+              <li>Integrated MSCI Barra CNE5 risk model; applied PCA for latent factor decomposition; optimized portfolio under exposure constraints, improving Sharpe from 0.9 to 1.2 with 6% max drawdown</li>
             </ul>
 
             <figure class="media xp__figure">
-              <img src="./images/strategy_return.jpg" alt="Strategy cumulative returns (strategy_return.jpg)" />
+              <img src="./images/strategy_return.jpg" alt="Strategy cumulative returns" />
             </figure>
-
-            <div class="xp__report card card--glass">
-              <h4 class="xp__report-title">Backtest Summary</h4>
-
-              <div class="xp__report-grid">
-                <div>
-                  <div class="xp__report-head">Performance</div>
-                  <ul class="xp__report-list">
-                    <li><span>Start NAV</span><span>100,000,000.00</span></li>
-                    <li><span>End NAV</span><span>114,399,148.42</span></li>
-                    <li><span>Total Return</span><span>14.40%</span></li>
-                    <li><span>Annualized Return</span><span>5.66%</span></li>
-                    <li><span>Annualized Vol</span><span>27.27%</span></li>
-                    <li><span>Sharpe Ratio</span><span>1.20</span></li>
-                    <li><span>Max Drawdown</span><span>-6.30%</span></li>
-                  </ul>
-                </div>
-
-                <div>
-                  <div class="xp__report-head">Benchmark Comparison</div>
-                  <ul class="xp__report-list">
-                    <li><span>Index Total Return</span><span>-4.95%</span></li>
-                    <li><span>Strategy Total Return</span><span>14.40%</span></li>
-                    <li><span>Hedged Total Return</span><span>19.48%</span></li>
-                    <li><span>Avg Daily Excess</span><span>0.0330%</span></li>
-                  </ul>
-
-                  <p class="xp__report-foot">
-                    The strategy outperformed the CSI 1000 Index by <strong>~0.03%</strong> on average per day.
-                  </p>
-                </div>
-              </div>
-            </div>
           </article>
 
           <article class="xp card card--glass">
@@ -377,9 +332,9 @@
             </div>
 
             <ul class="xp__bullets">
-              <li>Led a cohort of 7 students in the program to conduct U.S. equity research, daily-frequency factor analysis, and rolling trading experiments</li>
-              <li>Designed a structured workflow for data cleaning, factor validation, and performance attribution; coordinated weekly deliverables and peer reviews</li>
-              <li>Presented research findings to industry guests, receiving strong feedback for clarity, rigor, and practical relevance</li>
+              <li>Led a cohort of 7 students to conduct equity research, daily factor analysis, and rolling trading experiments</li>
+              <li>Designed workflow for data cleaning, validation, and performance attribution; coordinated weekly deliverables and peer reviews</li>
+              <li>Presented findings to industry guests; received strong feedback for clarity, rigor, and practical relevance</li>
             </ul>
           </article>
 
@@ -388,22 +343,21 @@
     </section>
 
     <!-- =========================
-         CONTACT
+         CONTACT (still available, but not required for homepage)
      ========================= -->
     <section class="section" id="contact" aria-label="Contact">
       <div class="row">
-        <h2 class="section__title">Get in Touch</h2>
+        <h2 class="section__title">Contact</h2>
 
         <div class="contact card card--glass">
           <p class="contact__text">
-            If you’re building systematic strategies, validating models, or improving risk attribution workflows —
-            I’m happy to connect and talk research, pipelines, and practical implementation.
+            Preferred channels: Email / LinkedIn. GitHub available for code + research artifacts.
           </p>
 
           <div class="contact__actions">
             <a class="btn btn--primary" href="mailto:jinjia.peng1122@gmail.com">Email</a>
             <a class="btn btn--ghost" href="https://www.linkedin.com/in/jinjiapeng/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn btn--ghost" href="https://github.com/jppeng-123" rel="noopener">GitHub</a>
+            <a class="btn btn--ghost" href="https://github.com/jppeng-123" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </div>
@@ -415,7 +369,7 @@
     <section class="closing" id="closing" aria-label="Closing">
       <div class="row closing__stack">
         <figure class="media media--closing">
-          <img src="./images/equation.png" alt="Monte Carlo convergence teaser (equation.png)" />
+          <img src="./images/equation.png" alt="Monte Carlo convergence teaser" />
         </figure>
 
         <h2 class="closing__line">
@@ -443,7 +397,6 @@
     </div>
   </footer>
 
-  <!-- Back to top floating button -->
   <a href="#home" class="back-to-top" title="Back to Top" aria-label="Back to top">
     <img src="./images/arrow-up.svg" alt="" class="back-to-top__image" />
   </a>
