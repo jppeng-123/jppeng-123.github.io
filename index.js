@@ -1,15 +1,15 @@
 /* =========================================================
-   JP Peng — index.js (Static, professional)
+   JP Peng — index.js (Static, minimal)
    Keeps only:
    (1) Keyboard-only focus outlines
-   (2) Back-to-top button show/hide
+   (2) Back-to-top show/hide
    (3) Footer year auto-update
    ========================================================= */
 
 (() => {
   "use strict";
 
-  /* 1) Focus outline only for keyboard users */
+  // 1) Focus outline only for keyboard users
   function enableKeyboardFocus() {
     document.body.classList.add("user-is-tabbing");
   }
@@ -26,9 +26,9 @@
   window.addEventListener("mousedown", disableKeyboardFocus, { passive: true });
   window.addEventListener("touchstart", disableKeyboardFocus, { passive: true });
 
-  /* 2) Back to top button toggle */
+  // 2) Back to top button
   const backToTopButton = document.querySelector(".back-to-top");
-  const SHOW_AFTER_PX = 380;
+  const SHOW_AFTER_PX = 360;
 
   function setBackToTopVisible(visible) {
     if (!backToTopButton) return;
@@ -46,7 +46,7 @@
     onScroll();
   }
 
-  /* 3) Footer year (auto) */
+  // 3) Footer year
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 })();
