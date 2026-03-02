@@ -6,6 +6,7 @@
    - Email/Phone written out with high-contrast color
    - LinkedIn/GitHub use same primary button style
    - Remove Contact section (already removed in HTML)
+   - Projects section title updated; added project meta + bullets styling
    ========================================================= */
 
 /* Fonts (local) */
@@ -234,10 +235,10 @@ body.user-is-tabbing button:focus{
 .hero{
   margin-top: 18px;
   display:grid;
-  grid-template-columns: 1.05fr 0.95fr;   /* more balanced; fills width */
+  grid-template-columns: 1.05fr 0.95fr;
   gap: 18px;
   align-items: stretch;
-  min-height: 72vh;                      /* makes first screen feel “full” */
+  min-height: 72vh;
 }
 
 /* Left */
@@ -324,7 +325,7 @@ a.contactvalue:hover{
 .profile__photo img{
   width: 100%;
   height: clamp(360px, 46vh, 520px);
-  object-fit: contain;   /* <- key: never crop */
+  object-fit: contain;
   object-position: center;
   background: rgba(0,0,0,.10);
 }
@@ -391,7 +392,24 @@ a.contactvalue:hover{
   font-size: var(--h3);
   color: var(--ink-0);
 }
+
+/* NEW: meta row for date/type */
+.project__meta{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+  color: var(--ink-3);
+  font-size:14px;
+  margin-top: -4px;
+}
+.project__meta-left,
+.project__meta-right{
+  white-space:nowrap;
+}
+
 .project__desc{ margin:0; color: var(--ink-2); }
+
 .tagrow{ display:flex; flex-wrap:wrap; gap:8px; }
 .tag{
   font-size:12px;
@@ -401,6 +419,17 @@ a.contactvalue:hover{
   background: rgba(255,255,255,.03);
   color: rgba(255,255,255,.78);
 }
+
+.project__actions{ display:flex; gap:10px; flex-wrap:wrap; }
+
+/* NEW: bullets inside project cards */
+.project__bullets{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--ink-2);
+}
+.project__bullets li{ margin: 8px 0; }
+
 .project__single img{
   width:100%;
   border-radius: var(--radius-lg);
@@ -465,7 +494,7 @@ a.contactvalue:hover{
 .footer{
   border-top:1px solid var(--line);
   padding:20px 0 28px;
-  color: var(--ink-3);
+  color:var(--ink-3);
 }
 .footer__row{
   display:flex;
