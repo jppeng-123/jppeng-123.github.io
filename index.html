@@ -15,11 +15,6 @@
 
   <!-- =========================
        TOP HERO
-       - No image crop
-       - Less empty space
-       - Email/Phone written out clearly
-       - LinkedIn/GitHub as same-style primary buttons
-       - Remove Contact section entirely
      ========================= -->
   <header class="header" role="banner" id="home">
     <div class="row header__nav">
@@ -48,7 +43,6 @@
           AI &amp; Quant Finance Analyst | Predictive Modeling, Valuation &amp; Investment Analytics
         </p>
 
-        <!-- Primary actions (same style) -->
         <div class="hero__cta">
           <a class="btn btn--primary" href="./resume/JP_PENG_QUANT_RESUME_PORTFOLIO.pdf" target="_blank" rel="noopener">Resume</a>
           <a class="btn btn--primary" href="#projects">Projects</a>
@@ -56,7 +50,6 @@
           <a class="btn btn--primary" href="https://github.com/jppeng-123" target="_blank" rel="noopener">GitHub</a>
         </div>
 
-        <!-- Contact info written out (bright, readable) -->
         <div class="hero__contact" aria-label="Contact info">
           <div class="contactline">
             <span class="contactlabel">Email:</span>
@@ -77,7 +70,6 @@
       <aside class="hero__right" aria-label="Profile card">
         <div class="card card--glass profile">
           <figure class="profile__photo">
-            <!-- IMPORTANT: no crop -->
             <img src="./images/JP_Peng.jpg" alt="JP Peng portrait" />
           </figure>
 
@@ -127,23 +119,18 @@
     </section>
 
     <!-- =========================
-         PROJECTS
+         FEATURED ANALYTICS (ONLY 3 CARDS)
      ========================= -->
-    <section class="section" id="projects" aria-label="Featured project reports">
+    <section class="section" id="projects" aria-label="Featured Analytics">
       <div class="row">
-        <h2 class="section__title">Featured Project Reports</h2>
+        <h2 class="section__title">Featured Analytics</h2>
         <p class="section__subtitle">
           Research-grade deliverables with leakage-safe evaluation, interpretable diagnostics, and report-ready outputs.
         </p>
 
         <div class="grid grid--projects">
-          <!-- Existing 3 cards (kept) -->
           <article class="project card card--glass">
             <h3 class="project__title">Systematic Equity Alpha Research Pipeline</h3>
-            <div class="project__meta">
-              <span class="project__meta-left">Research Report</span>
-              <span class="project__meta-right">PDF</span>
-            </div>
             <p class="project__desc">
               Factor construction, IC/t-stat screening, attribution diagnostics, and reporting designed for repeatable deployment.
             </p>
@@ -168,10 +155,6 @@
 
           <article class="project card card--glass">
             <h3 class="project__title">Monte Carlo Equity Modeling (iSoftStone)</h3>
-            <div class="project__meta">
-              <span class="project__meta-left">Research Report</span>
-              <span class="project__meta-right">PDF</span>
-            </div>
             <p class="project__desc">
               Simulation-based scenario analysis for return distributions and tail-risk understanding.
             </p>
@@ -196,10 +179,6 @@
 
           <article class="project card card--glass">
             <h3 class="project__title">PCA Factor Decomposition (S&amp;P 500)</h3>
-            <div class="project__meta">
-              <span class="project__meta-left">Research Report</span>
-              <span class="project__meta-right">PDF</span>
-            </div>
             <p class="project__desc">
               PCA on return matrices to extract latent factors, quantify explained variance, and support risk decomposition.
             </p>
@@ -221,114 +200,6 @@
               <img src="./images/PCA.png" alt="PCA analysis visualization" />
             </figure>
           </article>
-
-          <!-- New 5 featured project reports (added) -->
-          <article class="project card card--glass">
-            <h3 class="project__title">Portfolio Value at Risk Monte Carlo Simulation</h3>
-            <div class="project__meta">
-              <span class="project__meta-left">Jan 2025 – Feb 2025</span>
-              <span class="project__meta-right">GitHub</span>
-            </div>
-
-            <ul class="project__bullets">
-              <li>Simulated 10,000 iSoftstone stock price paths under jump-diffusion geometric Brownian motion; analyzed period return distributions</li>
-              <li>Calculated 95% VaR to quantify portfolio tail-risk exposure and potential downside losses</li>
-              <li>Stress tested extreme volatility and jump scenarios; observed drawdowns exceeding 50% under severe market shocks</li>
-              <li>Recommended protective hedging strategies and reduced exposure levels to mitigate extreme downside risk</li>
-            </ul>
-
-            <div class="project__actions">
-              <a class="btn btn--small btn--ghost"
-                 href="https://github.com/jppeng-123/Monte_Carlo_Simulation/blob/main/analytic_stock_price_simulation/code.ipynb"
-                 target="_blank" rel="noopener">
-                View on GitHub
-              </a>
-            </div>
-          </article>
-
-          <article class="project card card--glass">
-            <h3 class="project__title">S&amp;P 500 Principal Component Analysis (PCA)</h3>
-            <div class="project__meta">
-              <span class="project__meta-left">Oct 2024 – Dec 2024</span>
-              <span class="project__meta-right">GitHub</span>
-            </div>
-
-            <ul class="project__bullets">
-              <li>Applied PCA to daily returns of 10 S&amp;P 500 financial stocks; top 3 components explained 68.01% of variance</li>
-              <li>Revealed systemic risk drivers and translated results into market insights via heatmaps, component trends, and 3D visualization</li>
-            </ul>
-
-            <div class="project__actions">
-              <a class="btn btn--small btn--ghost"
-                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_pca_sp500_stock_analysis/code.ipynb"
-                 target="_blank" rel="noopener">
-                View on GitHub
-              </a>
-            </div>
-          </article>
-
-          <article class="project card card--glass">
-            <h3 class="project__title">Stock K-means Classification</h3>
-            <div class="project__meta">
-              <span class="project__meta-left">Sep 2024 – Oct 2024</span>
-              <span class="project__meta-right">GitHub</span>
-            </div>
-
-            <ul class="project__bullets">
-              <li>Curated Russell 2000 data (1,750 stocks) from Bloomberg &amp; Morningstar with PEG and market-cap inputs; used K-means (9 clusters) to segment peer groups</li>
-              <li>Implemented KNN classification to tag new securities and visualized clusters for interpretable equity segmentation</li>
-            </ul>
-
-            <div class="project__actions">
-              <a class="btn btn--small btn--ghost"
-                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_equity_clustering_k_means%26knn/execution_code.ipynb"
-                 target="_blank" rel="noopener">
-                View on GitHub
-              </a>
-            </div>
-          </article>
-
-          <article class="project card card--glass">
-            <h3 class="project__title">Mortgage Rate Change Forecasting</h3>
-            <div class="project__meta">
-              <span class="project__meta-left">Nov 2024 – Dec 2024</span>
-              <span class="project__meta-right">Report</span>
-            </div>
-
-            <ul class="project__bullets">
-              <li>Built a mortgage-rate change forecasting model for U.S. 30-year mortgage rates (2010–2020) using time-series &amp; ML methods (Federal Reserve data; AR, ARMA, XGBoost Classifier)</li>
-              <li>Reframed forecasting into rate-direction classification; achieved 0.67 ROC-AUC while balancing precision–recall tradeoffs</li>
-            </ul>
-
-            <div class="project__actions">
-              <a class="btn btn--small btn--ghost"
-                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_ml_interest_change_forecasting/report.pdf"
-                 target="_blank" rel="noopener">
-                Open Report (PDF)
-              </a>
-            </div>
-          </article>
-
-          <article class="project card card--glass">
-            <h3 class="project__title">Iowa Housing Price Prediction</h3>
-            <div class="project__meta">
-              <span class="project__meta-left">Aug 2024 – Oct 2024</span>
-              <span class="project__meta-right">GitHub</span>
-            </div>
-
-            <ul class="project__bullets">
-              <li>Developed an asset price prediction model using Ridge and Lasso regression on features such as location, floor size, and room layout</li>
-              <li>Achieved ~0.90 R² and ~13% out-of-sample error variance via cross-validation, indicating limited overfitting and stable performance across time windows</li>
-            </ul>
-
-            <div class="project__actions">
-              <a class="btn btn--small btn--ghost"
-                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_iowa_housing_price_prediction/code.ipynb"
-                 target="_blank" rel="noopener">
-                View on GitHub
-              </a>
-            </div>
-          </article>
         </div>
       </div>
     </section>
@@ -344,7 +215,6 @@
         </p>
 
         <div class="timeline">
-          <!-- Ubiquant (Trade Data Analyst / Quantitative Developer) -->
           <article class="xp card card--glass">
             <div class="xp__top">
               <div>
@@ -362,7 +232,6 @@
             </ul>
           </article>
 
-          <!-- Independent Portfolio Quantitative Researcher (keep existing image) -->
           <article class="xp card card--glass">
             <div class="xp__top">
               <div>
@@ -379,13 +248,12 @@
               <li>Modeled volatility regimes to dynamically scale capital deployment, achieving 14.4% return, 1.2 Sharpe ratio, and 6% maximum drawdown within a documented, repeatable evaluation framework</li>
             </ul>
 
-            <!-- IMPORTANT: keep this existing image -->
+            <!-- KEEP EXISTING IMAGE -->
             <figure class="media xp__figure">
               <img src="./images/strategy_return.jpg" alt="Strategy cumulative returns" />
             </figure>
           </article>
 
-          <!-- NC State University -->
           <article class="xp card card--glass">
             <div class="xp__top">
               <div>
@@ -403,7 +271,6 @@
             </ul>
           </article>
 
-          <!-- Safran Cabin -->
           <article class="xp card card--glass">
             <div class="xp__top">
               <div>
@@ -418,6 +285,127 @@
               <li>Reduced duplicate inventory records by 20% and lowered procurement costs by 7.2% by integrating Excel (VLOOKUP, PivotTables) controls with the LeanDNA ERP system across 600+ supplier records</li>
               <li>Collaborated with suppliers and cross-functional stakeholders to communicate potential disruptions, confirm order accuracy, and mitigate fulfillment risks</li>
             </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         QUANTITATIVE PORTFOLIO (NEW SECTION AFTER WORK EXPERIENCE)
+     ========================= -->
+    <section class="section" id="portfolio" aria-label="Quantitative Portfolio">
+      <div class="row">
+        <h2 class="section__title">Quantitative Portfolio</h2>
+        <p class="section__subtitle">
+          Selected research notebooks and reports — simulation, dimensionality reduction, clustering, forecasting, and regression.
+        </p>
+
+        <div class="grid grid--projects">
+          <article class="project card card--glass">
+            <h3 class="project__title">Portfolio Value at Risk Monte Carlo Simulation</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">January 2025 – February 2025</span>
+              <span class="project__meta-right">GitHub</span>
+            </div>
+
+            <ul class="project__bullets">
+              <li>Simulated 10,000 iSoftstone stock price paths under jump-diffusion geometric Brownian motion, analyzed period return distributions</li>
+              <li>Calculated 95% VaR, quantifying portfolio tail risk exposure and potential downside losses</li>
+              <li>Stress tested extreme volatility and jump scenarios, indicating drawdowns exceeding 50% under severe market shocks</li>
+              <li>Recommended protective hedging investment strategies and reduced exposure levels to mitigate extreme downside risk</li>
+            </ul>
+
+            <div class="project__actions">
+              <a class="btn btn--small btn--ghost"
+                 href="https://github.com/jppeng-123/Monte_Carlo_Simulation/blob/main/analytic_stock_price_simulation/code.ipynb"
+                 target="_blank" rel="noopener">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <h3 class="project__title">S&amp;P 500 Principal Component Analysis (PCA)</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">October 2024 – December 2024</span>
+              <span class="project__meta-right">GitHub</span>
+            </div>
+
+            <ul class="project__bullets">
+              <li>Applied PCA to daily returns of 10 S&amp;P 500 financial stocks with the top 3 components explaining 68.01% of variance</li>
+              <li>Revealed systemic risk drivers and translated results into market insights through heatmaps, component trend plots, and 3D visualization</li>
+            </ul>
+
+            <div class="project__actions">
+              <a class="btn btn--small btn--ghost"
+                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_pca_sp500_stock_analysis/code.ipynb"
+                 target="_blank" rel="noopener">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <h3 class="project__title">Stock K-means Classification</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">September 2024 – October 2024</span>
+              <span class="project__meta-right">GitHub</span>
+            </div>
+
+            <ul class="project__bullets">
+              <li>Curated Russell 2000 data (1,750 stocks) from Bloomberg and Morningstar with PEG and market-cap inputs; utilized K-means (9 clusters) to segment data-driven peer groups</li>
+              <li>Implemented KNN classification to tag new securities and visualized cluster outputs for interpretable equity segmentation</li>
+            </ul>
+
+            <div class="project__actions">
+              <a class="btn btn--small btn--ghost"
+                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_equity_clustering_k_means%26knn/execution_code.ipynb"
+                 target="_blank" rel="noopener">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <h3 class="project__title">Mortgage Rate Change Forecasting</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">November 2024 – December 2024</span>
+              <span class="project__meta-right">Report</span>
+            </div>
+
+            <ul class="project__bullets">
+              <li>Built a mortgage-rate change forecasting model for U.S. 30-year mortgage rates (2010–2020) using time-series and ML methods (Federal Reserve data; AR, ARMA, XGBoost Classifier)</li>
+              <li>Reframed forecasting into rate-direction classification, achieved a 0.67 ROC-AUC while balancing precision–recall tradeoffs</li>
+            </ul>
+
+            <div class="project__actions">
+              <a class="btn btn--small btn--ghost"
+                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_ml_interest_change_forecasting/report.pdf"
+                 target="_blank" rel="noopener">
+                Open Report (PDF)
+              </a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <h3 class="project__title">Iowa Housing Price Prediction</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">August 2024 – October 2024</span>
+              <span class="project__meta-right">GitHub</span>
+            </div>
+
+            <ul class="project__bullets">
+              <li>Developed an asset price prediction model using Ridge and Lasso regression on features such as location, floor size, and room layout</li>
+              <li>Achieved ~0.90 R² and ~13% out-of-sample error variance through cross-validation, indicating limited overfitting and stable performance across time windows</li>
+            </ul>
+
+            <div class="project__actions">
+              <a class="btn btn--small btn--ghost"
+                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_iowa_housing_price_prediction/code.ipynb"
+                 target="_blank" rel="noopener">
+                View on GitHub
+              </a>
+            </div>
           </article>
         </div>
       </div>
