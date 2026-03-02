@@ -68,7 +68,6 @@
           </div>
         </div>
 
-        <!-- Optional: keep it minimal, but this helps fill left whitespace cleanly -->
         <div class="hero__micro">
           Quant research workflows • Robust validation • Practical tradability
         </div>
@@ -130,16 +129,21 @@
     <!-- =========================
          PROJECTS
      ========================= -->
-    <section class="section" id="projects" aria-label="Selected projects">
+    <section class="section" id="projects" aria-label="Featured project reports">
       <div class="row">
-        <h2 class="section__title">Selected Projects</h2>
+        <h2 class="section__title">Featured Project Reports</h2>
         <p class="section__subtitle">
           Research-grade deliverables with leakage-safe evaluation, interpretable diagnostics, and report-ready outputs.
         </p>
 
         <div class="grid grid--projects">
+          <!-- Existing 3 cards (kept) -->
           <article class="project card card--glass">
             <h3 class="project__title">Systematic Equity Alpha Research Pipeline</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">Research Report</span>
+              <span class="project__meta-right">PDF</span>
+            </div>
             <p class="project__desc">
               Factor construction, IC/t-stat screening, attribution diagnostics, and reporting designed for repeatable deployment.
             </p>
@@ -164,6 +168,10 @@
 
           <article class="project card card--glass">
             <h3 class="project__title">Monte Carlo Equity Modeling (iSoftStone)</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">Research Report</span>
+              <span class="project__meta-right">PDF</span>
+            </div>
             <p class="project__desc">
               Simulation-based scenario analysis for return distributions and tail-risk understanding.
             </p>
@@ -188,6 +196,10 @@
 
           <article class="project card card--glass">
             <h3 class="project__title">PCA Factor Decomposition (S&amp;P 500)</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">Research Report</span>
+              <span class="project__meta-right">PDF</span>
+            </div>
             <p class="project__desc">
               PCA on return matrices to extract latent factors, quantify explained variance, and support risk decomposition.
             </p>
@@ -209,73 +221,202 @@
               <img src="./images/PCA.png" alt="PCA analysis visualization" />
             </figure>
           </article>
+
+          <!-- New 5 featured project reports (added) -->
+          <article class="project card card--glass">
+            <h3 class="project__title">Portfolio Value at Risk Monte Carlo Simulation</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">Jan 2025 – Feb 2025</span>
+              <span class="project__meta-right">GitHub</span>
+            </div>
+
+            <ul class="project__bullets">
+              <li>Simulated 10,000 iSoftstone stock price paths under jump-diffusion geometric Brownian motion; analyzed period return distributions</li>
+              <li>Calculated 95% VaR to quantify portfolio tail-risk exposure and potential downside losses</li>
+              <li>Stress tested extreme volatility and jump scenarios; observed drawdowns exceeding 50% under severe market shocks</li>
+              <li>Recommended protective hedging strategies and reduced exposure levels to mitigate extreme downside risk</li>
+            </ul>
+
+            <div class="project__actions">
+              <a class="btn btn--small btn--ghost"
+                 href="https://github.com/jppeng-123/Monte_Carlo_Simulation/blob/main/analytic_stock_price_simulation/code.ipynb"
+                 target="_blank" rel="noopener">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <h3 class="project__title">S&amp;P 500 Principal Component Analysis (PCA)</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">Oct 2024 – Dec 2024</span>
+              <span class="project__meta-right">GitHub</span>
+            </div>
+
+            <ul class="project__bullets">
+              <li>Applied PCA to daily returns of 10 S&amp;P 500 financial stocks; top 3 components explained 68.01% of variance</li>
+              <li>Revealed systemic risk drivers and translated results into market insights via heatmaps, component trends, and 3D visualization</li>
+            </ul>
+
+            <div class="project__actions">
+              <a class="btn btn--small btn--ghost"
+                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_pca_sp500_stock_analysis/code.ipynb"
+                 target="_blank" rel="noopener">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <h3 class="project__title">Stock K-means Classification</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">Sep 2024 – Oct 2024</span>
+              <span class="project__meta-right">GitHub</span>
+            </div>
+
+            <ul class="project__bullets">
+              <li>Curated Russell 2000 data (1,750 stocks) from Bloomberg &amp; Morningstar with PEG and market-cap inputs; used K-means (9 clusters) to segment peer groups</li>
+              <li>Implemented KNN classification to tag new securities and visualized clusters for interpretable equity segmentation</li>
+            </ul>
+
+            <div class="project__actions">
+              <a class="btn btn--small btn--ghost"
+                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_equity_clustering_k_means%26knn/execution_code.ipynb"
+                 target="_blank" rel="noopener">
+                View on GitHub
+              </a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <h3 class="project__title">Mortgage Rate Change Forecasting</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">Nov 2024 – Dec 2024</span>
+              <span class="project__meta-right">Report</span>
+            </div>
+
+            <ul class="project__bullets">
+              <li>Built a mortgage-rate change forecasting model for U.S. 30-year mortgage rates (2010–2020) using time-series &amp; ML methods (Federal Reserve data; AR, ARMA, XGBoost Classifier)</li>
+              <li>Reframed forecasting into rate-direction classification; achieved 0.67 ROC-AUC while balancing precision–recall tradeoffs</li>
+            </ul>
+
+            <div class="project__actions">
+              <a class="btn btn--small btn--ghost"
+                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_ml_interest_change_forecasting/report.pdf"
+                 target="_blank" rel="noopener">
+                Open Report (PDF)
+              </a>
+            </div>
+          </article>
+
+          <article class="project card card--glass">
+            <h3 class="project__title">Iowa Housing Price Prediction</h3>
+            <div class="project__meta">
+              <span class="project__meta-left">Aug 2024 – Oct 2024</span>
+              <span class="project__meta-right">GitHub</span>
+            </div>
+
+            <ul class="project__bullets">
+              <li>Developed an asset price prediction model using Ridge and Lasso regression on features such as location, floor size, and room layout</li>
+              <li>Achieved ~0.90 R² and ~13% out-of-sample error variance via cross-validation, indicating limited overfitting and stable performance across time windows</li>
+            </ul>
+
+            <div class="project__actions">
+              <a class="btn btn--small btn--ghost"
+                 href="https://github.com/jppeng-123/Machine_Learning/blob/main/analytic_iowa_housing_price_prediction/code.ipynb"
+                 target="_blank" rel="noopener">
+                View on GitHub
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- =========================
-         EXPERIENCE
+         WORK EXPERIENCE
      ========================= -->
-    <section class="section" id="experience" aria-label="Experience">
+    <section class="section" id="experience" aria-label="Work Experience">
       <div class="row">
-        <h2 class="section__title">Experience</h2>
+        <h2 class="section__title">Work Experience</h2>
         <p class="section__subtitle">
-          Systematic research, data pipelines, execution analytics, and portfolio/risk reporting.
+          Execution analytics, systematic research, portfolio risk modeling, and cross-functional delivery.
         </p>
 
         <div class="timeline">
+          <!-- Ubiquant (Trade Data Analyst / Quantitative Developer) -->
           <article class="xp card card--glass">
             <div class="xp__top">
               <div>
-                <h3 class="xp__role">Ubiquant | Quantitative Development Internship</h3>
-                <div class="xp__org">Quant Dev IT Supporter — Beijing</div>
+                <h3 class="xp__role">Ubiquant | Trade Data Analyst / Quantitative Developer</h3>
+                <div class="xp__org">Beijing</div>
               </div>
               <div class="xp__meta">Jul 2025 – Aug 2025</div>
             </div>
 
             <ul class="xp__bullets">
-              <li>Vectorized Python pipelines for large-scale trade/market data to accelerate analytics</li>
-              <li>Implementation Shortfall &amp; TCA to evaluate execution quality and slippage</li>
-              <li>Order–trade reconciliation to improve P&amp;L accuracy and attribution</li>
-              <li>Automated reporting dashboards for P&amp;L + risk monitoring</li>
+              <li>Extracted high-frequency trading data and reconciled internal server logs, broker submissions, and final fills to improve execution traceability, audit readiness, and data integrity</li>
+              <li>Identified unfilled trades across risk controls and broker routing, tracked root causes, and strengthened control diagnostics</li>
+              <li>Stabilized implementation shortfall at 5.4 bps by building a Python pipeline in VS Code and partnering with the HFT team, processing 30,000+ transactions per day</li>
+              <li>Lowered slippage variance by 17%, reducing tail-cost risk while ensuring transparency and regulatory compliance</li>
             </ul>
           </article>
 
+          <!-- Independent Portfolio Quantitative Researcher (keep existing image) -->
           <article class="xp card card--glass">
             <div class="xp__top">
               <div>
-                <h3 class="xp__role">Ubiquant | Quantitative Research Internship</h3>
-                <div class="xp__org">Systematic Equity Strategies — Beijing</div>
+                <h3 class="xp__role">Independent Portfolio Quantitative Researcher</h3>
+                <div class="xp__org">Systematic Equity Strategy &amp; Research Platform</div>
               </div>
               <div class="xp__meta">Apr 2025 – Jul 2025</div>
             </div>
 
             <ul class="xp__bullets">
-              <li>Replicated 101 formulaic alpha signals with liquidity/volume filters; SQL + PYODBC workflow</li>
-              <li>IC hypothesis testing + Fama–MacBeth regressions to retain statistically significant factors</li>
-              <li>Rolling EGARCH + regime-switching HMM to adapt allocations across regimes</li>
-              <li>Backtest (2023–2025) delivered 14.4% cumulative return with controlled drawdowns</li>
-              <li>Integrated Barra-style risk + PCA decomposition; improved Sharpe 0.9 → 1.2 under constraints</li>
+              <li>Developed a systematic equity trading strategy and built a SQL Server–Python research platform using the Massive Exchange API, integrating 101 Formulaic Alphas with liquidity and volume constraints</li>
+              <li>Filtered factors using IC analysis and regularized regressions to improve signal resilience</li>
+              <li>Implemented a Barra multi-factor risk model to monitor factor exposures and applied risk parity allocation to balance risk contributions</li>
+              <li>Modeled volatility regimes to dynamically scale capital deployment, achieving 14.4% return, 1.2 Sharpe ratio, and 6% maximum drawdown within a documented, repeatable evaluation framework</li>
             </ul>
 
+            <!-- IMPORTANT: keep this existing image -->
             <figure class="media xp__figure">
               <img src="./images/strategy_return.jpg" alt="Strategy cumulative returns" />
             </figure>
           </article>
 
+          <!-- NC State University -->
           <article class="xp card card--glass">
             <div class="xp__top">
               <div>
-                <h3 class="xp__role">NC State University | Program Ambassador</h3>
-                <div class="xp__org">Leadership — Raleigh</div>
+                <h3 class="xp__role">North Carolina State University | Financial Modeler &amp; Program Ambassador</h3>
+                <div class="xp__org">Raleigh, NC</div>
               </div>
               <div class="xp__meta">Aug 2025 – Dec 2025</div>
             </div>
 
             <ul class="xp__bullets">
-              <li>Led 7-person cohort for equity research, factor validation, and rolling experiments</li>
-              <li>Built workflow for cleaning, validation, and performance attribution; coordinated reviews</li>
-              <li>Presented findings to industry guests with emphasis on rigor and applicability</li>
+              <li>Led a 7-member team to develop a Nasdaq equities strategy using Bloomberg Terminal and Python APIs; onboarded new members and standardized feature engineering workflows (NumPy vectorization, matrix operations)</li>
+              <li>Validated model reliability via hypothesis testing, leakage prevention, and time-series stability checks, confirming statistically significant out-of-sample performance across evaluation periods</li>
+              <li>Lowered idiosyncratic risk by 6% via diversification across a 7,000+ stock universe and improved cross-sectional sampling</li>
+              <li>Translated model outputs into data visualizations, presented results to industry clients, and supported program engagement</li>
+            </ul>
+          </article>
+
+          <!-- Safran Cabin -->
+          <article class="xp card card--glass">
+            <div class="xp__top">
+              <div>
+                <h3 class="xp__role">Safran Cabin, Inc. | Supply Chain Strategic Purchasing Intern</h3>
+                <div class="xp__org">Supply Chain &amp; Procurement</div>
+              </div>
+              <div class="xp__meta">Jun 2023 – Sep 2023</div>
+            </div>
+
+            <ul class="xp__bullets">
+              <li>Analyzed supply chain risk using the Newsvendor framework to evaluate demand uncertainty and service level trade-offs</li>
+              <li>Reduced duplicate inventory records by 20% and lowered procurement costs by 7.2% by integrating Excel (VLOOKUP, PivotTables) controls with the LeanDNA ERP system across 600+ supplier records</li>
+              <li>Collaborated with suppliers and cross-functional stakeholders to communicate potential disruptions, confirm order accuracy, and mitigate fulfillment risks</li>
             </ul>
           </article>
         </div>
