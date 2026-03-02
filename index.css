@@ -1,12 +1,9 @@
 /* =========================================================
-   JP Peng — index.css (Hero re-layout)
-   Key updates:
-   - Photo NEVER cropped: object-fit: contain
-   - Reduce empty space: hero min-height + tighter grid
-   - Email/Phone written out with high-contrast color
-   - LinkedIn/GitHub use same primary button style
-   - Remove Contact section (already removed in HTML)
-   - Projects section title updated; added project meta + bullets styling
+   JP Peng — index.css
+   Updates in this version:
+   - Featured section renamed to "Featured Analytics" (HTML change)
+   - New "Quantitative Portfolio" section uses same project card styles
+   - Adds project meta + bullets styling (used by portfolio cards)
    ========================================================= */
 
 /* Fonts (local) */
@@ -33,7 +30,6 @@
   --ink-2:rgba(255,255,255,.68);
   --ink-3:rgba(255,255,255,.50);
 
-  /* quant teal/cyan */
   --brand:#2ee9d3;
   --brand-2:#26b9ff;
 
@@ -231,7 +227,7 @@ body.user-is-tabbing button:focus{
   border-color: rgba(46,233,211,.22);
 }
 
-/* HERO (reduce empty space) */
+/* HERO */
 .hero{
   margin-top: 18px;
   display:grid;
@@ -269,7 +265,6 @@ body.user-is-tabbing button:focus{
   margin-bottom: 14px;
 }
 
-/* Contact lines (bright, not subtle) */
 .hero__contact{
   margin-top: 4px;
   padding-top: 10px;
@@ -287,9 +282,7 @@ body.user-is-tabbing button:focus{
   font-family: var(--display);
   min-width: 64px;
 }
-.contactvalue{
-  color: rgba(255,255,255,.92);
-}
+.contactvalue{ color: rgba(255,255,255,.92); }
 a.contactvalue{
   border-bottom: 1px solid rgba(46,233,211,.35);
   padding-bottom: 1px;
@@ -320,8 +313,6 @@ a.contactvalue:hover{
   box-shadow: var(--shadow-soft);
   overflow: hidden;
 }
-
-/* NO CROP: contain + fixed height */
 .profile__photo img{
   width: 100%;
   height: clamp(360px, 46vh, 520px);
@@ -330,9 +321,7 @@ a.contactvalue:hover{
   background: rgba(0,0,0,.10);
 }
 
-.profile__body{
-  padding: 14px 6px 6px;
-}
+.profile__body{ padding: 14px 6px 6px; }
 .profile__title{
   margin: 6px 0 10px 0;
   font-family: var(--display);
@@ -373,7 +362,7 @@ a.contactvalue:hover{
   background: rgba(0,0,0,.20);
 }
 
-/* Projects */
+/* Projects (used by Featured Analytics + Quantitative Portfolio) */
 .grid--projects{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -392,8 +381,29 @@ a.contactvalue:hover{
   font-size: var(--h3);
   color: var(--ink-0);
 }
+.project__desc{ margin:0; color: var(--ink-2); }
 
-/* NEW: meta row for date/type */
+.project__actions{ display:flex; gap:10px; flex-wrap:wrap; }
+
+.tagrow{ display:flex; flex-wrap:wrap; gap:8px; }
+.tag{
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(255,255,255,.03);
+  color: rgba(255,255,255,.78);
+}
+
+.project__single img{
+  width:100%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  background: rgba(0,0,0,.20);
+}
+
+/* Portfolio meta + bullets (for Quantitative Portfolio cards) */
 .project__meta{
   display:flex;
   justify-content:space-between;
@@ -407,36 +417,12 @@ a.contactvalue:hover{
 .project__meta-right{
   white-space:nowrap;
 }
-
-.project__desc{ margin:0; color: var(--ink-2); }
-
-.tagrow{ display:flex; flex-wrap:wrap; gap:8px; }
-.tag{
-  font-size:12px;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.03);
-  color: rgba(255,255,255,.78);
-}
-
-.project__actions{ display:flex; gap:10px; flex-wrap:wrap; }
-
-/* NEW: bullets inside project cards */
 .project__bullets{
   margin: 0;
   padding-left: 18px;
   color: var(--ink-2);
 }
 .project__bullets li{ margin: 8px 0; }
-
-.project__single img{
-  width:100%;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-soft);
-  background: rgba(0,0,0,.20);
-}
 
 /* Experience */
 .timeline{ display:grid; gap:16px; }
